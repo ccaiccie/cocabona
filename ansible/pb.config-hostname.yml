@@ -1,0 +1,25 @@
+---
+- name: "### configure the hostname of network devices"
+  hosts: all
+  connection: local
+  gather_facts: no
+  roles:
+    - juniper.junos
+  tasks:
+    ### -----------------------------------------------
+    ### Configure hostname
+    ### -----------------------------------------------
+    - name: "configure the hostname on our network switches"
+      juniper_junos_config:
+        user: 'nornir'
+        passwd: 'nornir123'
+        load: 'merge'
+        lines:
+          - 'set system host-name {{ inventory_hostname }}'
+        format: 'set'
+      register: response
+
+    - name: Print the complete response
+      debug:
+        var: response
+
