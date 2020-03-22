@@ -1,0 +1,40 @@
+---
+- name: "### retrieve the configuration from our devices"
+  hosts: all
+  connection: local
+  gather_facts: no
+  roles:
+    - juniper.junos
+  tasks:
+    ### --------------------------------------------------
+    ### remove and recreate backup directories
+    ### --------------------------------------------------
+    - name: "remove backup directores"
+      file:
+        path: "{{ backup_directory }}"
+        state: absent
+
+    - name: "create backup directores"
+      file:
+        path: "{{ backup_directory }}"
+        state: directory
+
+    ### --------------------------------------------------
+    ### retrieve configurations from network devices
+    ### --------------------------------------------------
+    - name: "retrieve configurations"
+      juniper_junos_config:
+        user: 'nornir'
+        passwd: 'nornir123'
+        retrieve: committed
+        format: "text"
+      register: text_config
+    
+    ### --------------------------------------------------
+    ### write output of variable to a local config file
+    ### --------------------------------------------------
+    - name: "create local text file for configurations"
+      local_action:
+        module: copy
+        content: "{{ text_config.config }}"
+        dest: "{{ backup_directory }}/config.conf"
