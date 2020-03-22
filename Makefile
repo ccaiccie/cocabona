@@ -6,6 +6,6 @@ build:
 
 run:
 	docker run -it \
-	-v $(PWD):/home/tmp/files \
+	-v C:\\Users\\calvi\\development\\packetferret\\cocabona:/home/tmp/files \
 	-w /home/tmp/files \
 	$(DOCKER_IMG):$(DOCKER_TAG) /usr/bin/zsh
