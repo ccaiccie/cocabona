@@ -1,5 +1,5 @@
 DOCKER_IMG = packetferret/cocabona
-DOCKER_TAG = development
+DOCKER_TAG = 0.0.1
 
 build:
 	docker build -t $(DOCKER_IMG):$(DOCKER_TAG) docker/
