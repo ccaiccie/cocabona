@@ -54,4 +54,4 @@ WORKDIR /opt/app-root/src/ansible
 ### -------------------------------------------------
 ENV HAPPY True
 ENV SHELL /usr/bin/zsh
-ENV ANSIBLE_CONFIG /opt/app-root/src/ansible/ansible.cfg
+ENV ANSIBLE_CONFIG /home/tmp/files/ansible/ansible.cfg
