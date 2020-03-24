@@ -1,1 +1,3 @@
 .vscode/settings.json
+ansible/filter_plugins/__pycache__/hyphen_to_underscore.cpython-36.pyc
+ansible/filter_plugins/__pycache__/xml_to_json.cpython-36.pyc
