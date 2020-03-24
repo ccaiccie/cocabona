@@ -1,0 +1,14 @@
+configuration:
+  protocols:
+    isis:
+      apply_groups: GLOBAL_ISIS_DEFAULTS
+    # ospf:
+    #   export:
+    #     - "LOOPBACK0"
+    #   area: 
+    #     - name: "0.0.0.0"
+    #       interface:
+    #         - name: "ge-0/0/6.0"
+    #           interface_type: "p2p"
+    ldp:
+      track_igp_metric: null

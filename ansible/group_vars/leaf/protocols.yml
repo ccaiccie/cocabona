@@ -1,0 +1,10 @@
+configuration:
+  protocols:
+    igmp_snooping:
+      vlan:
+        name: default
+    mstp:
+      configuration_name: brookefield
+      msti:
+        name: "1"
+        vlan: 1-4094

@@ -1,0 +1,181 @@
+# configuration:
+#   event_options:
+#     event_script:
+#       file:
+#         - name: mist_link_event_logger.py
+#           checksum:
+#             sha_256: b115338aa1d7a668a57b9d17b273e2149a801c7a5c70a8a9a46aea9be919b5ee
+#           python_script_user: mist
+#         - name: mist_backup_cfg.py
+#           checksum:
+#             sha_256: a3e3abf8766d96ed096466ad8f8893991124d28a7620260436f47bfb8887375b
+#           python_script_user: mist
+#         - name: mist_storm_control_event_logger.py
+#           checksum:
+#             sha_256: 741291645835180001320940c66661b6ce234c3da24217260d5d579a665bb6fb
+#           python_script_user: mist
+#         - name: mist_link_event_capturer.py
+#           checksum:
+#             sha_256: a3d0cb2b83e94ae8a6a4f7fdb0020ed98f191edc933e9e1365418816a69ff1f2
+#           python_script_user: mist
+#     policy:
+#       - name: log-on-snmp-trap-link
+#         events:
+#           - snmp_trap_link_up
+#           - snmp_trap_link_down
+#         then:
+#           event_script:
+#             name: mist_link_event_logger.py
+#       - name: backup-cfg-after-commit
+#         events: 
+#           - ui_commit_completed
+#         then:
+#           event_script:
+#             name: mist_backup_cfg.py
+#       - name: log-on-storm-ctrl-in-effect
+#         events: 
+#           - l2ald_st_ctl_in_effect
+#         then:
+#           event_script:
+#             name: mist_storm_control_event_logger.py
+#       - name: log-on-system-events
+#         events:
+#           - chassisd_fan_failure
+#           - chassisd_high_temp_condition
+#           - chassisd_psu_error
+#           - chassisd_psu_temperature
+#           - chassisd_unsupported_pic
+#           - chassisd_vchassis_member_update_notice
+#           - system_abnormal_shutdown
+#           - system_operational
+#           - system_shutdown
+#           - sshd_login_failed
+#           - dot1xd_async_stats_init_fail
+#           - dot1xd_auth_session_deleted
+#           - dot1xd_cp_vlan_creat
+#           - dot1xd_cp_vlan_support
+#           - dot1xd_iccp_close_conn
+#           - dot1xd_iccp_conn_termt
+#           - dot1xd_iccp_connect_failed
+#           - dot1xd_iccp_connt_timer
+#           - dot1xd_iccp_conntd
+#           - dot1xd_iccp_dot1x_interaction
+#           - dot1xd_iccp_pipe_init_fail
+#           - dot1xd_iccp_socket_quit
+#           - dot1xd_ifd_stats_rply
+#           - dot1xd_l2ng
+#           - dot1xd_macsec_mmap_error
+#           - dot1xd_macsec_sc_cak_activated
+#           - dot1xd_macsec_sc_cak_expired
+#           - dot1xd_macsec_sc_fallback_cak_in_use
+#           - dot1xd_macsec_sc_pre_shared_key_not_activated
+#           - dot1xd_macsec_sc_preceding_cak_in_use
+#           - dot1xd_macsec_sc_primary_cak_in_use
+#           - dot1xd_major_exception_log
+#           - dot1xd_mka_cli_error
+#           - dot1xd_mka_fail_action_user_allowed
+#           - dot1xd_mka_fail_action_user_prohibited
+#           - dot1xd_mka_nonblocking_error
+#           - dot1xd_mka_not_set_local_addr
+#           - dot1xd_mka_not_set_reuse_task
+#           - dot1xd_mka_pipe_attch_error
+#           - dot1xd_mka_pipe_cret_error
+#           - dot1xd_mka_pipe_read_error
+#           - dot1xd_mka_resuse_task
+#           - dot1xd_mka_sa_key_rollover
+#           - dot1xd_mka_secure_association_established
+#           - dot1xd_mka_secure_channel_created
+#           - dot1xd_mka_secure_channel_deleted
+#           - dot1xd_mka_serv_error
+#           - dot1xd_mka_socket_bind_error
+#           - dot1xd_mka_socket_listen_error
+#           - dot1xd_mka_task_crt_fail
+#           - dot1xd_multi_domain_data_limit_exceeded
+#           - dot1xd_multi_domain_limit
+#           - dot1xd_multi_domain_voip_limit_exceeded
+#           - dot1xd_rcvd_eaplogof_athntctng
+#           - dot1xd_rcvd_eaplogof_athntictd
+#           - dot1xd_rcvd_eaplogof_connectng
+#           - dot1xd_skip_lldp_connect
+#           - dot1xd_trunk_attribute_validation_failed
+#           - dot1xd_usr_access_denied
+#           - dot1xd_usr_athntictd_gst_vlan
+#           - dot1xd_usr_authenticated
+#           - dot1xd_usr_on_srvr_fail_vlan
+#           - dot1xd_usr_on_srvr_reject_vlan
+#           - dot1xd_usr_session_disconnected
+#           - dot1xd_usr_session_held
+#           - dot1xd_usr_unathntctd_cli_clrd
+#           - snmp_get_error1
+#           - snmp_get_error2
+#           - snmp_get_error3
+#           - snmp_get_error4
+#           - snmp_rtslib_failure
+#           - snmp_trap_tracert_path_change
+#           - snmp_trap_tracert_test_completed
+#           - snmp_trap_tracert_test_failed
+#           - snmpd_auth_failure
+#           - snmpd_auth_privileges_exceeded
+#           - snmpd_auth_restricted_address
+#           - snmpd_auth_wrong_pdu_type
+#           - snmpd_bind_info
+#           - snmpd_config_error
+#           - snmpd_context_error
+#           - snmpd_duplicate_trap_name
+#           - snmpd_engine_id_changed
+#           - snmpd_ext_context_alloc_failed
+#           - snmpd_file_failure
+#           - snmpd_group_error
+#           - snmpd_health_mon_thresh_cross
+#           - snmpd_host_to_addrinfo_failed
+#           - snmpd_init_failed
+#           - snmpd_int_context_alloc_failed
+#           - snmpd_libjuniper_failure
+#           - snmpd_missing_registration
+#           - snmpd_object_parent_not_present
+#           - snmpd_object_type_missing
+#           - snmpd_object_type_unknown
+#           - snmpd_objname_to_oid_failed
+#           - snmpd_oid_not_allowed
+#           - snmpd_oid_to_key_failed
+#           - snmpd_parsing_json
+#           - snmpd_parsing_json_failed
+#           - snmpd_radix_failure
+#           - snmpd_receive_failure
+#           - snmpd_rmon_cookie
+#           - snmpd_rmon_eventlog
+#           - snmpd_rmon_miberror
+#           - snmpd_rmonfile_failure
+#           - snmpd_rtslib_async_event
+#           - snmpd_script_oid_error
+#           - snmpd_script_registered
+#           - snmpd_send_failure
+#           - snmpd_set_failed
+#           - snmpd_smoid_gen_failure
+#           - snmpd_socket_failure
+#           - snmpd_socket_fatal_failure
+#           - snmpd_syslib_failure
+#           - snmpd_sysoid_failure
+#           - snmpd_sysoid_gen_failure
+#           - snmpd_throttle_queue_drained
+#           - snmpd_trap_cold_start
+#           - snmpd_trap_gen_failure
+#           - snmpd_trap_invalid_data
+#           - snmpd_trap_queue_drained
+#           - snmpd_trap_queue_max_attempts
+#           - snmpd_trap_queue_max_size
+#           - snmpd_trap_queued
+#           - snmpd_trap_target_add_notice
+#           - snmpd_trap_target_delete_notice
+#           - snmpd_trap_throttled
+#           - snmpd_trap_warm_start
+#           - snmpd_user_error
+#           - eswd_stp_state_change_info
+#           - eswd_stp_base_mac_error
+#           - eswd_stp_loop_protect_cleared
+#           - eswd_stp_loop_protect_in_effect
+#           - eswd_stp_root_protect_cleared
+#           - eswd_stp_root_protect_in_effect
+#         then:
+#           event_script:
+#             name: mist_link_event_capturer.py

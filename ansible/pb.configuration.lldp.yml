@@ -1,5 +1,5 @@
 ---
-- name: "### configure the hostname of network devices"
+- name: "### configure the lldp on our interfaces"
   hosts: all
   connection: local
   gather_facts: no
@@ -7,15 +7,16 @@
     - juniper.junos
   tasks:
     ### -----------------------------------------------
-    ### Configure hostname
+    ### Configure LLDP
     ### -----------------------------------------------
-    - name: "configure the hostname on our network switches"
+    - name: "configure the lldp on our interfaces"
       juniper_junos_config:
         user: 'nornir'
         passwd: 'nornir123'
         load: 'merge'
         lines:
-          - 'set system host-name {{ inventory_hostname }}'
+          - 'set protocols lldp interface all'
+          - 'set protocols lldp interface em0 disable'
         format: 'set'
       register: response
 

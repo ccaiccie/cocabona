@@ -1,0 +1,10 @@
+configuration:
+  routing_options:
+    autonomous_system:
+      as_number: "10.1"
+    # static:
+    #   route:
+    #     name: 10.255.0.0/17
+    #     next_hop: 10.0.0.1
+    #     no_readvertise: null
+    #     no_retain: null

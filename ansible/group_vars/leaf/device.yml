@@ -1,0 +1,7 @@
+device:
+  role:
+    - switch
+  hardware:
+    family: "ex"
+    virtual_chassis: null
+  software:

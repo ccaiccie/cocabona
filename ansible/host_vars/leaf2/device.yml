@@ -1,0 +1,11 @@
+device:
+  hardware:
+    chassis: "ACX1100"
+  software:
+    os_image: "jinstall-ppc-19.1R2.8-signed.tgz"
+  lo0: 
+    ipv4: 192.168.22.9
+    iso: 49.0192.0168.0022.0009.00
+  # mist:
+  #   id: "2de61580-7726-487e-9998-abb09b9c16e7.f04b3a7c041f"
+  #   secret: "$9$F7kb6/tBIEhyl.PF/9A1IbsYg4Z.P5n6ATQylKvLXVwY2GDk.Pzn/iHtu0BSyKM87NbJGDm5Qq.hSyrvMDiHkTzFn/u0Iik1REhrl8X7-YgDikqfTaJDkPfn6KMW8db4oGHkPGUtu1IrlYg4JikfTzAuOQzSrev7NYgoZikP5QF69Qz39tpB1NdVwaZiHmQz6Vw4ZDjPfz369A0IEcyKM36ylvMXx.Pf569OBElvWcSwYgojiP5QnApREyrKMEh-Vbs4oGDi.mTFn/AuOaZ69CtOBX7Ndgoji.F69HkIEhcleJGUjHmFn/CuOUjkPQz6/uO1IEyW87Vb2BIrvW87NDiHqmT/9pIhSOBxNVwg4ZUjHqf/Ct"
