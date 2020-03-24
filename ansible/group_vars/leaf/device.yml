@@ -1,7 +1,6 @@
 device:
   role:
-    - switch
+    - leaf
   hardware:
     family: "vqfx"
-    virtual_chassis: null
   software:
