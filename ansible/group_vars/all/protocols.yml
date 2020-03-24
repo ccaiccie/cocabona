@@ -2,9 +2,8 @@ configuration:
   protocols:
     lldp:
       interface:
-        name: all
+        - name: all
+        - name: em0
+          disable: null
       port_description_type: interface-alias
       port_id_subtype: interface-name
-    lldp_med:
-      interface:
-        name: all

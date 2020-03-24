@@ -2,14 +2,4 @@ configuration:
   chassis:
     aggregated_devices:
       ethernet:
-        device_count: "16"
-    disk_partition:
-      name: "/var"
-      level:
-        - name: "high"
-          free_space:
-            thres_free: 100
-            percent: null
-    alarm:
-      management_ethernet:
-        link_down: "ignore"
+        device_count: "64"
