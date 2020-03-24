@@ -1,6 +1,0 @@
-device:
-  role:
-    - router
-  hardware:
-    family: "acx"
-  software:

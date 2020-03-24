@@ -401,7 +401,19 @@ protocols {
         encapsulation {{ configuration.protocols.evpn.encapsulation }};
         {% endif %}
         {% if configuration.protocols.evpn.extended_vni_list is defined %}
+        {# ----------------------------------------------------------------------------------- #}
+        {# check to see if the extended vni list is a list                                     #}
+        {# ---------------------------------------------------------------------------------- -#}
+        {% if configuration.protocols.evpn.extended_vni_list is not mapping and configuration.protocols.evpn.extended_vni_list is not string %}
+        {% for each in configuration.protocols.evpn.extended_vni_list %}
+        extended-vni-list {{ each }};
+        {% endfor %}
+        {# ----------------------------------------------------------------------------------- #}
+        {# match everything that is not a list                                                 #}
+        {# ---------------------------------------------------------------------------------- -#}
+        {% else %}
         extended-vni-list {{ configuration.protocols.evpn.extended_vni_list }};
+        {% endif %}
         {% endif %}
     }
     {% endif %}

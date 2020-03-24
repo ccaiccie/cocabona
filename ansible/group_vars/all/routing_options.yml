@@ -1,0 +1,10 @@
+configuration:
+  routing_options:
+    forwarding_table:
+      export: 
+        - "POLICY_LB"
+      ecmp_fast_reroute: 
+        - null
+    router_id: "192.168.200.1"
+    autonomous_system:
+      as_number: "100.0"

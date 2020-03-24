@@ -175,7 +175,9 @@ routing-options {
     {% if configuration.routing_options.forwarding_table is defined %}
     forwarding-table {
         {% if configuration.routing_options.forwarding_table.export is defined %}
-        export {{ configuration.routing_options.forwarding_table.export }};
+        {% for each in configuration.routing_options.forwarding_table.export %}
+        export {{ each }};
+        {% endfor %}
         {% endif %}
         {% if configuration.routing_options.forwarding_table.ecmp_fast_reroute is defined %}
         ecmp-fast-reroute;

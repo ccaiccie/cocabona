@@ -1,45 +1,9 @@
 configuration:
   vlans:
     vlan:
-      - name: vlan_255
-        description: Home LAN traffic, primary VLAN
-        # forwarding_options:
-        #   dhcp_security:
-        #     group:
-        #       interface:
-        #         - name: ae1.0
-        #         - name: ae2.0
-        #         - name: ae3.0
-        #       name: DHCP_SERVERS
-        #       overrides:
-        #         trusted: null
-        l3_interface: irb.255
-        vlan_id: "255"
-      - name: vlan_666
-        description: Guest Wireless network
-        # forwarding_options:
-        #   dhcp_security:
-        #     group:
-        #       interface:
-        #         - name: ae1.0
-        #         - name: ae2.0
-        #         - name: ae3.0
-        #       name: DHCP_SERVERS
-        #       overrides:
-        #         trusted: null
-        # l3_interface: irb.666
-        vlan_id: "666"
-      - name: vlan_911
-        description: Home IOT VLAN
-        # forwarding_options:
-        #   dhcp_security:
-        #     group:
-        #       interface:
-        #         - name: ae1.0
-        #         - name: ae2.0
-        #         - name: ae3.0
-        #       name: DHCP_SERVERS
-        #       overrides:
-        #         trusted: null
-        # l3_interface: irb.911
-        vlan_id: "911"
+      - name: redtail_dc
+        description: "vlan 100 for redtail consulting"
+        # l3_interface: irb.100
+        vlan_id: "100"
+        vxlan:
+          vni: 5100

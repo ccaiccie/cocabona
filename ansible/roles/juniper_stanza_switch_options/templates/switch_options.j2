@@ -24,7 +24,9 @@ switch-options {
     {% elif configuration.switch_options.vrf_import['#text'] is defined %}
     vrf-import {{ configuration.switch_options.vrf_import['#text'] }};
     {% else %}
-    vrf-import {{ configuration.switch_options.vrf_import }};
+    {% for each in configuration.switch_options.vrf_import %}
+    vrf-import {{ each }};
+    {% endfor %}
     {% endif %}
     {% endif %}
     {% if configuration.switch_options.vrf_target is defined %}

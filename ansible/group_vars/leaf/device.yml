@@ -2,6 +2,6 @@ device:
   role:
     - switch
   hardware:
-    family: "ex"
+    family: "vqfx"
     virtual_chassis: null
   software:
