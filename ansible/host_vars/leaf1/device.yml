@@ -1,0 +1,15 @@
+device:
+  role:
+    - switch
+    - virtual_chassis
+  hardware:
+    family: "ex"
+    chassis: "Virtual Chassis"
+  software:
+    os_image: "junos-arm-32-18.2R3.4.tgz"
+  lo0: 
+    ipv4: 192.168.22.6
+    iso: 49.0192.0168.0022.0001.00
+  # mist:
+  #   id: "2de61580-7726-487e-9998-abb09b9c16e7.f04b3a7c041f"
+  #   secret: $9$/njL9O1hSrlvWn/vWX7Vb.PfT69p0BREyk.uOIRSyvWLNwYgoJGUHY2n/CA0ObsYoDi.P53/CTQIEcyW8Hq.mz39ApOBEtp1hyr8LHq.mfzCtuB1hk.1RcyW8ZUDkqfQFnCp0GDp0IRSyKM8xbsJZjqP5X7Ujq.zFvW8XbsUjHfQFdb.P5T/9vW87bs2gJH.Poa9ApuEhevWx7VaZUDHqY2n/tpB17-dwoJZUjfQFkquO1EyrWLxNYgaJDPTziHCtu0hcKM87NbJGD.fTZGHmf5F3reKM87dbsaJDlKxds2aJDikqmTn/COBE6/WL7NY2fTQFnCAp0hyl1Is24ojiqmf5n/CA0BEctp8X7-wsaZUHfTFn/

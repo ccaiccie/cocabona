@@ -1,0 +1,272 @@
+configuration:
+  interfaces:
+    apply_groups: GLOBAL_MTU_DEFAULTS
+    interface:
+      - name: ge-0/0/0
+        mtu: "9192"
+        unit:
+          family:
+            ethernet_switching:
+              interface_mode: access
+              vlan:
+                members: vlan_255
+          # description: "null"
+          name: "0"
+      - name: ge-0/0/1
+        mtu: "9192"
+        unit:
+          family:
+            ethernet_switching:
+              interface_mode: access
+              vlan:
+                members: vlan_255
+          # description: "null"
+          name: "0"
+      - name: ge-0/0/2
+        mtu: "9192"
+        unit:
+          family:
+            ethernet_switching:
+              interface_mode: trunk
+              vlan:
+                members: all
+          description: "esx4: dswitch"
+          name: "0"
+      - name: ge-0/0/3
+        mtu: "9192"
+        unit:
+          family:
+            ethernet_switching:
+              interface_mode: access
+              vlan:
+                members: vlan_255
+          # description: "null"
+          name: "0"
+      - name: ge-0/0/4
+        mtu: "9192"
+        unit:
+          family:
+            ethernet_switching:
+              interface_mode: access
+              vlan:
+                members: vlan_255
+          description: "esx6: mgmt"
+          name: "0"
+      - name: ge-0/0/5
+        mtu: "9192"
+        unit:
+          family:
+            ethernet_switching:
+              interface_mode: access
+              vlan:
+                members: vlan_255
+          description: "esx4: mgmt"
+          name: "0"
+      - name: ge-0/0/6
+        mtu: "9192"
+        unit:
+          family:
+            ethernet_switching:
+              interface_mode: trunk
+              vlan:
+                members: all
+          description: "esx5: dswitch"
+          name: "0"
+      - name: ge-0/0/7
+        mtu: "9192"
+        unit:
+          family:
+            ethernet_switching:
+              interface_mode: access
+              vlan:
+                members: vlan_255
+          # description: "null"
+          name: "0"
+      - name: ge-0/0/8
+        mtu: "9192"
+        unit:
+          family:
+            ethernet_switching:
+              interface_mode: access
+              vlan:
+                members: vlan_255
+          # description: "null"
+          name: "0"
+      - name: ge-0/0/9
+        mtu: "9192"
+        unit:
+          family:
+            ethernet_switching:
+              interface_mode: access
+              vlan:
+                members: vlan_255
+          # description: "null"
+          name: "0"
+      - name: ge-0/0/10
+        mtu: "9192"
+        unit:
+          family:
+            ethernet_switching:
+              interface_mode: access
+              vlan:
+                members: vlan_255
+          # description: "null"
+          name: "0"
+      - name: ge-0/0/11
+        mtu: "9192"
+        unit:
+          family:
+            ethernet_switching:
+              interface_mode: access
+              vlan:
+                members: vlan_255
+          # description: "null"
+          name: "0"
+      - name: ge-0/0/12
+        mtu: "9192"
+        unit:
+          family:
+            ethernet_switching:
+              interface_mode: access
+              vlan:
+                members: vlan_255
+          description: "esx1: mgmt"
+          name: "0"
+      - name: ge-0/0/13
+        mtu: "9192"
+        unit:
+          family:
+            ethernet_switching:
+              interface_mode: trunk
+              vlan:
+                members: all
+          description: "esx1: dswitch"
+          name: "0"
+      - name: ge-0/0/14
+        mtu: "9192"
+        unit:
+          family:
+            ethernet_switching:
+              interface_mode: trunk
+              vlan:
+                members: all
+          description: "esx1: dswitch"
+          name: "0"
+      - name: ge-0/0/15
+        mtu: "9192"
+        unit:
+          family:
+            ethernet_switching:
+              interface_mode: trunk
+              vlan:
+                members: all
+          description: "esx1: dswitch"
+          name: "0"
+      - name: ge-0/0/16
+        mtu: "9192"
+        unit:
+          family:
+            ethernet_switching:
+              interface_mode: access
+              vlan:
+                members: vlan_255
+          description: "dellserver: idrac"
+          name: "0"
+      - name: ge-0/0/17
+        mtu: "9192"
+        unit:
+          family:
+            ethernet_switching:
+              interface_mode: access
+              vlan:
+                members: vlan_255
+          description: "esx1: mgmt"
+          name: "0"
+      - name: ge-0/0/18
+        mtu: "9192"
+        unit:
+          family:
+            ethernet_switching:
+              interface_mode: access
+              vlan:
+                members: vlan_255
+          # description: "null"
+          name: "0"
+      - name: ge-0/0/19
+        mtu: "9192"
+        unit:
+          family:
+            ethernet_switching:
+              interface_mode: access
+              vlan:
+                members: vlan_255
+          # description: "null"
+          name: "0"
+      - name: ge-0/0/20
+        mtu: "9192"
+        unit:
+          family:
+            ethernet_switching:
+              interface_mode: access
+              vlan:
+                members: vlan_255
+          # description: "null"
+          name: "0"
+      - name: ge-0/0/21
+        mtu: "9192"
+        unit:
+          family:
+            ethernet_switching:
+              interface_mode: access
+              vlan:
+                members: vlan_255
+          # description: "null"
+          name: "0"
+      - name: ge-0/0/22
+        mtu: "9192"
+        unit:
+          family:
+            ethernet_switching:
+              interface_mode: access
+              vlan:
+                members: vlan_255
+          # description: "null"
+          name: "0"
+      - name: ge-0/0/23
+        mtu: "9192"
+        unit:
+          family:
+            ethernet_switching:
+              interface_mode: access
+              vlan:
+                members: vlan_255
+          # description: "null"
+          name: "0"
+      - name: xe-0/1/0
+        mtu: "9192"
+        unit:
+          family:
+            ethernet_switching:
+              interface_mode: trunk
+              vlan:
+                members: all
+          description: "tatooine: xe-0/1/0"
+          name: "0"
+      - name: irb
+        unit:
+          - family:
+              inet:
+                address:
+                  name: "{{ ansible_host }}/17"
+            name: "255"
+      - name: lo0
+        unit:
+          - description: loopback
+            family:
+              inet:
+                address:
+                  name: "{{ device.lo0.ipv4 }}/32"
+              iso:
+                address:
+                  name: "{{ device.lo0.iso }}"
+            name: "0"

@@ -1,0 +1,76 @@
+configuration:
+  interfaces:
+    interface:
+      - name: ge-0/0/0
+        unit:
+          description: "routereflector1"
+          family:
+            inet:
+              address:
+                name: 172.20.12.1/24
+          name: "0"
+      - name: ge-0/0/1
+        unit:
+          description: "routereflector2"
+          family:
+            inet:
+              address:
+                name: 172.20.13.1/24
+          name: "0"
+      - name: ge-0/1/1
+        unit:
+          description: "hoth: ge-0/0/15"
+          family:
+            inet:
+              address:
+                name: 74.51.101.0/31
+            iso: null
+            mpls: null
+          name: "0"
+      - name: ge-0/1/2
+        unit:
+          description: "geonosis: ge-0/0/7"
+          family:
+            inet:
+              address:
+                name: 74.51.102.0/31
+            iso: null
+            mpls: null
+          name: "0"
+      - name: ge-0/1/3
+        unit:
+          description: "dantooine: ge-0/0/7"
+          family:
+            inet:
+              address:
+                name: 74.51.103.0/31
+            iso: null
+            mpls: null
+          name: "0"
+      - name: fxp0
+        unit:
+          description: "tatooine: ge-0/0/1"
+          family:
+            inet:
+              address:
+                name: 10.255.0.18/17
+            iso: null
+            mpls: null
+          name: "0"
+      - name: lo0
+        unit:
+          - description: primary loopback interface
+            family:
+              inet:
+                address:
+                  name: "{{ device.lo0.ipv4 }}/32"
+              iso:
+                address:
+                  name: "{{ device.lo0.iso }}"
+            name: "0"
+          - description: loopback for l3vpn
+            family:
+              inet:
+                address:
+                  name: "172.20.255.0/32"
+            name: "1"

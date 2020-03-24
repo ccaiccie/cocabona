@@ -1,0 +1,10 @@
+configuration:
+  protocols:
+    mstp:
+      interface:
+        - mode: point-to-point
+          name: xe-0/1/0
+      msti:
+        interface:
+          - cost: "1"
+            name: xe-0/1/0

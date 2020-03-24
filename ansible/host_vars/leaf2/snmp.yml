@@ -1,0 +1,3 @@
+configuration:
+  snmp:
+    interface: fxp0.0

@@ -1,0 +1,21 @@
+configuration:
+  firewall:
+    policer:
+      - if_exceeding:
+          bandwidth_limit: 10m
+          burst_size_limit: 2m
+        name: LIMIT_10M
+        then:
+          discard: null
+      - if_exceeding:
+          bandwidth_limit: 2m
+          burst_size_limit: 1m
+        name: LIMIT_2M
+        then:
+          discard: null
+      - if_exceeding:
+          bandwidth_limit: 1m
+          burst_size_limit: 200k
+        name: LIMIT_1M
+        then:
+          discard: null

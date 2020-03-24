@@ -1,0 +1,51 @@
+configuration:
+  protocols:
+    # bgp:
+    #   group:
+    #     - name: "hoth_geonosis"
+    #       bfd_liveness_detection:
+    #         minimum_interval: "2000"
+    #         multiplier: "3"
+    #         session_mode: multihop
+    #       export: 
+    #         - POLICY_NEXT_HOP_SELF
+    #         - LOOPBACK1
+    #         - POLICY_DEFAULT
+    #       family:
+    #         inet:
+    #           unicast: null
+    #         inet_vpn:
+    #           unicast: null
+    #       local_address: "{{ device.lo0.ipv4 }}"
+    #       log_updown: null
+    #       multipath: null
+    #       neighbor:
+    #         - description: "l3vpn: hoth <-> geonosis"
+    #           name: 192.168.22.4
+    #       type: internal
+
+    isis:
+      apply_groups: GLOBAL_ISIS_DEFAULTS
+      export: 
+        - POLICY_EXPORT_ROUTER_IPV4
+      interface:
+        - name: xe-0/0/1.0
+        - name: xe-0/0/2.0
+        - name: xe-0/0/3.0
+        - name: xe-0/0/4.0
+        - name: lo0.0
+          passive: null
+
+    # ldp:
+    #   interface:
+    #     - name: ge-0/1/1.0
+    #     - name: ge-0/1/2.0
+    #     - name: ge-0/1/3.0
+    #     - name: lo0.0
+
+    # mpls:
+    #   interface:
+    #     - name: ge-0/1/1.0
+    #     - name: ge-0/1/2.0
+    #     - name: ge-0/1/3.0
+    #     - name: lo0.0

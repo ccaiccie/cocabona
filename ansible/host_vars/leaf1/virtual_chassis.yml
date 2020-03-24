@@ -1,0 +1,16 @@
+# configuration:
+#   virtual_chassis:
+#     preprovisioned: null
+#     member:
+#       - name: 0
+#         role: "routing-engine"
+#         serial_number: "JY0216490336"
+#       - name: 1
+#         role: "routing-engine"
+#         serial_number: "HW0218120298"
+#       - name: 2
+#         role: "line-card"
+#         serial_number: "HW0218120082"
+#       - name: 3
+#         role: "line-card"
+#         serial_number: "HW0216520055"

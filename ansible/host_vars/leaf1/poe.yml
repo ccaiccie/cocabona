@@ -1,0 +1,4 @@
+configuration:
+  poe:
+    interface:
+      - name: all
