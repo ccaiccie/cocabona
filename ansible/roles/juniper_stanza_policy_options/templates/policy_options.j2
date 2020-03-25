@@ -93,6 +93,16 @@ policy-options {
                 {% endif %}
                 {% endif %}
                 {# ----------------------------------------------- #}
+                {# from interface                                  #}
+                {# ----------------------------------------------- #}
+                {% if each.term.from.interface is defined %}
+                {% if each.term.from.interface is not mapping and each.term.from.interface is not string %}
+                interface [ {{ each.term.from.interface|join(' ') }} ];
+                {% else %}
+                interface {{ each.term.from.interface }};
+                {% endif %}
+                {% endif %}
+                {# ----------------------------------------------- #}
                 {# from community                                  #}
                 {# ----------------------------------------------- #}
                 {% if each.term.from.community is defined %}

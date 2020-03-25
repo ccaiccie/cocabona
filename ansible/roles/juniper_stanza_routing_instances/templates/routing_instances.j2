@@ -136,6 +136,17 @@ routing-instances {
             {% if each.routing_options.multipath is defined %}
             multipath;
             {% endif %}
+            {% if each.routing_options.auto_export is defined %}
+            auto-export {
+                {% if each.routing_options.auto_export.family.inet is defined %}
+                family inet {
+                    {% if each.routing_options.auto_export.family.inet.unicast is defined %}
+                    unicast;
+                    {% endif %}
+                }
+                {% endif %}
+            }
+            {% endif %}
             {% if each.routing_options.autonomous_system is defined %}
             {% if each.routing_options.autonomous_system.loops is defined %}
             autonomous-system {{ each.routing_options.autonomous_system.as_number }} loops {{ each.routing_options.autonomous_system.loops }};
