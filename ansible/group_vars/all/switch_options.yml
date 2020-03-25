@@ -3,7 +3,7 @@ configuration:
     vtep_source_interface:
       interface_name: "lo0.0"
     route_distinguisher:
-      rd_type: "192.168.200.1:999"
+      rd_type: "{{ device.lo0.ipv4 }}:999"
     vrf_import: 
       - EVPN_IMPORT
     vrf_target:

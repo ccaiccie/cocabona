@@ -32,7 +32,8 @@ configuration:
             interface: irb.100
           name: 1
           then:
-            community: com100
+            community: 
+              - community_name: com100
             accept: null
       - name: IMPORT_INET
         term:

@@ -7,7 +7,7 @@ configuration:
           - name: "lo0.1"
           - name: "irb.100"
         route_distinguisher:
-          rd_type: "{{ device.lo0.ipv4 }}:100"
+          rd_type: "{{ device.lo1.ipv4 }}:100"
         routing_options:
           multipath:
             - null
