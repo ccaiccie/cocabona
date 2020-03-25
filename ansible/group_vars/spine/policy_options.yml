@@ -10,12 +10,14 @@ configuration:
             accept: null
       - name: POLICY_DEFAULT
         from:
-          prefix_list: PREFIX_DEFAULT
+          prefix_list: 
+            name: PREFIX_DEFAULT
         then:
           accept: null
       - name: POLICY_EXPORT_ROUTER_IPV4
         from:
-          prefix_list: PREFIX_LOOPBACK_IPV4
+          prefix_list: 
+            name: PREFIX_LOOPBACK_IPV4
         then:
           accept: null
       - name: POLICY_LB

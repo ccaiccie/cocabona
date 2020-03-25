@@ -15,7 +15,7 @@ LABEL build-date="20200322"
 ### -------------------------------------------------
 USER root
 RUN yum -y update 
-RUN yum -y install vim nmap wget telnet zsh
+RUN yum -y install vim nmap wget telnet zsh tree
 RUN yum clean all
 RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
 RUN rm -rf /tmp/* /var/tmp/*
