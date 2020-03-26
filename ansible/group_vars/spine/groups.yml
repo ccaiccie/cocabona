@@ -6,6 +6,7 @@ configuration:
           interface:
             - hello_padding_type: disable
               name: <*>
+              point_to_point: null
           level:
             - disable: null
               name: '1'

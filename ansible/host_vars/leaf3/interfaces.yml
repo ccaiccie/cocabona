@@ -40,45 +40,51 @@ configuration:
           lacp:
             active: null
             system_id: ae:02:11:00:01:01
+            force_up: null
         esi:
           all_active: null
           identifier: 00:ae:02:11:00:01:01:00:00:00
         unit:
           - name: "0"
-            ethernet_switching:
-              interface_mode: access
-              vlan:
-                members: redtail_dc
+            family:
+              ethernet_switching:
+                interface_mode: access
+                vlan:
+                  members: redtail_dc
       - name: ae1
         description: "server (members: xe-0/0/10)"
         aggregated_ether_options:
           lacp:
             active: null
             system_id: ae:02:11:00:01:02
+            force_up: null
         esi:
           all_active: null
           identifier: 00:ae:02:11:00:01:02:00:00:00
         unit:
           - name: "0"
-            ethernet_switching:
-              interface_mode: access
-              vlan:
-                members: redtail_dc
+            family:
+              ethernet_switching:
+                interface_mode: access
+                vlan:
+                  members: redtail_dc
       - name: ae2
         description: "server (members: xe-0/0/9)"
         aggregated_ether_options:
           lacp:
             active: null
             system_id: ae:02:11:00:01:03
+            force_up: null
         esi:
           all_active: null
           identifier: 00:ae:02:11:00:01:03:00:00:00
         unit:
           - name: "0"
-            ethernet_switching:
-              interface_mode: access
-              vlan:
-                members: redtail_dc
+            family:
+              ethernet_switching:
+                interface_mode: access
+                vlan:
+                  members: redtail_dc
       - name: em0
         unit:
           family:

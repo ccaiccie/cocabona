@@ -49,6 +49,9 @@ interfaces {
                 {% if each.aggregated_ether_options.lacp.periodic is defined %}
                 periodic {{ each.aggregated_ether_options.lacp.periodic }};
                 {% endif %}
+                {% if each.aggregated_ether_options.lacp.force_up is defined %}
+                force-up;
+                {% endif %}
             }
             {% endif %}
         }
@@ -178,7 +181,9 @@ interfaces {
                 interface-mode {{ each.family.ethernet_switching.interface_mode }};
                 {% endif %}
                 {% if each.family.ethernet_switching.vlan is defined %}
-                interface-mode {{ each.family.ethernet_switching.interface_mode }};
+                vlan {
+                    members {{ each.family.ethernet_switching.vlan.members }};
+                }
                 {% endif %}
             }
             {% endif %}

@@ -45,10 +45,12 @@ configuration:
           identifier: 00:ae:02:11:00:00:01:00:00:00
         unit:
           - name: "0"
-            ethernet_switching:
-              interface_mode: access
-              vlan:
-                members: redtail_dc
+            family:
+              ethernet_switching:
+                interface_mode: access
+                vlan:
+                  members: redtail_dc
+
       - name: ae1
         description: "server (members: xe-0/0/10)"
         aggregated_ether_options:
@@ -60,10 +62,11 @@ configuration:
           identifier: 00:ae:02:11:00:00:02:00:00:00
         unit:
           - name: "0"
-            ethernet_switching:
-              interface_mode: access
-              vlan:
-                members: redtail_dc
+            family:
+              ethernet_switching:
+                interface_mode: access
+                vlan:
+                  members: redtail_dc
       - name: ae2
         description: "server (members: xe-0/0/9)"
         aggregated_ether_options:
@@ -75,10 +78,11 @@ configuration:
           identifier: 00:ae:02:11:00:00:03:00:00:00
         unit:
           - name: "0"
-            ethernet_switching:
-              interface_mode: access
-              vlan:
-                members: redtail_dc
+            family:
+              ethernet_switching:
+                interface_mode: access
+                vlan:
+                  members: redtail_dc
       - name: em0
         unit:
           family:

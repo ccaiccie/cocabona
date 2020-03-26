@@ -9,7 +9,7 @@
     passwd: "{{ provider_info.passwd }}"
     # ssh_private_key_file: "{{ provider_info.ssh_private_key_file }}"
     src: "{{ completed_config_file }}"
-    timeout: 180
+    timeout: 240
   register: result
   # when: is_diff is defined
 
