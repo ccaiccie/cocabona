@@ -1,8 +1,8 @@
 ---
 ArpFull:
   rpc: get-arp-table-information
-  args:
-     no-resolve: True
+  # args:
+  #    no-resolve: True
   item: arp-table-entry
   key: mac-address
   view: ArpView2
