@@ -1,0 +1,2325 @@
+
+ 🐍 app-root  ✘ ⚡  ds9  ansible   master ✘ ✖ ✹  8s 
+#  clear
+
+
+ 🐍 app-root  ⚡  ds9  ansible   master ✘ ✖ ✹ 
+#  ansible-playbook pb.configuration.network.yml
+
+PLAY [all] ******************************************************************************************************************************
+
+TASK [Check ansible version >=2.7.8] ****************************************************************************************************
+Wednesday 01 April 2020  10:59:41 +0000 (0:00:00.187)       0:00:00.187 ******* 
+ok: [spine1] => changed=false 
+  msg: All assertions passed
+
+PLAY [all] ******************************************************************************************************************************
+
+TASK [localhost-build-dirs : Build local directories to hold output files] **************************************************************
+Wednesday 01 April 2020  10:59:41 +0000 (0:00:00.041)       0:00:00.228 ******* 
+ok: [spine1] => 
+  msg: Check roles/localhost-build-dirs/defaults/main.yml
+
+TASK [localhost-build-dirs : remove previous temporary build directory] *****************************************************************
+Wednesday 01 April 2020  10:59:41 +0000 (0:00:00.018)       0:00:00.246 ******* 
+changed: [spine1]
+changed: [leaf2]
+changed: [leaf1]
+
+TASK [localhost-build-dirs : create new temporary directory] ****************************************************************************
+Wednesday 01 April 2020  10:59:42 +0000 (0:00:00.375)       0:00:00.622 ******* 
+changed: [spine1]
+changed: [leaf1]
+changed: [leaf2]
+
+TASK [localhost-build-dirs : remove previous facts directory] ***************************************************************************
+Wednesday 01 April 2020  10:59:42 +0000 (0:00:00.240)       0:00:00.862 ******* 
+changed: [spine1]
+changed: [leaf1]
+changed: [leaf2]
+
+TASK [localhost-build-dirs : create facts directory] ************************************************************************************
+Wednesday 01 April 2020  10:59:42 +0000 (0:00:00.224)       0:00:01.086 ******* 
+changed: [spine1]
+changed: [leaf2]
+changed: [leaf1]
+
+TASK [localhost-build-dirs : remove any previous config directory] **********************************************************************
+Wednesday 01 April 2020  10:59:42 +0000 (0:00:00.244)       0:00:01.331 ******* 
+changed: [leaf1]
+ok: [spine1]
+ok: [leaf2]
+
+TASK [localhost-build-dirs : create new temporary directory] ****************************************************************************
+Wednesday 01 April 2020  10:59:43 +0000 (0:00:00.228)       0:00:01.559 ******* 
+ok: [leaf1]
+changed: [leaf2]
+ok: [spine1]
+
+PLAY [all] ******************************************************************************************************************************
+
+TASK [juniper_stanza_version : building version configuration] **************************************************************************
+Wednesday 01 April 2020  10:59:43 +0000 (0:00:00.250)       0:00:01.810 ******* 
+changed: [leaf2]
+changed: [leaf1]
+changed: [spine1]
+
+TASK [juniper_stanza_apply_groups : building apply_groups configuration] ****************************************************************
+Wednesday 01 April 2020  10:59:44 +0000 (0:00:00.828)       0:00:02.639 ******* 
+changed: [leaf1]
+changed: [leaf2]
+changed: [spine1]
+
+TASK [juniper_stanza_groups : building groups configuration] ****************************************************************************
+Wednesday 01 April 2020  10:59:44 +0000 (0:00:00.441)       0:00:03.081 ******* 
+changed: [spine1]
+changed: [leaf2]
+changed: [leaf1]
+
+TASK [juniper_stanza_system : building system configuration] ****************************************************************************
+Wednesday 01 April 2020  10:59:45 +0000 (0:00:00.575)       0:00:03.656 ******* 
+changed: [spine1]
+changed: [leaf1]
+changed: [leaf2]
+
+TASK [juniper_stanza_event_options : building event_options configuration] **************************************************************
+Wednesday 01 April 2020  10:59:45 +0000 (0:00:00.608)       0:00:04.264 ******* 
+skipping: [spine1]
+skipping: [leaf1]
+skipping: [leaf2]
+
+TASK [juniper_stanza_chassis : building chassis configuration] **************************************************************************
+Wednesday 01 April 2020  10:59:45 +0000 (0:00:00.048)       0:00:04.312 ******* 
+changed: [spine1]
+changed: [leaf1]
+changed: [leaf2]
+
+TASK [juniper_stanza_services : building services configuration] ************************************************************************
+Wednesday 01 April 2020  10:59:46 +0000 (0:00:00.465)       0:00:04.778 ******* 
+skipping: [spine1]
+skipping: [leaf1]
+skipping: [leaf2]
+
+TASK [juniper_stanza_security : building security configuration] ************************************************************************
+Wednesday 01 April 2020  10:59:46 +0000 (0:00:00.062)       0:00:04.840 ******* 
+skipping: [spine1]
+skipping: [leaf1]
+skipping: [leaf2]
+
+TASK [juniper_stanza_interfaces : building interfaces configuration] ********************************************************************
+Wednesday 01 April 2020  10:59:46 +0000 (0:00:00.060)       0:00:04.901 ******* 
+changed: [leaf2]
+changed: [leaf1]
+changed: [spine1]
+
+TASK [juniper_stanza_snmp : building snmp configuration] ********************************************************************************
+Wednesday 01 April 2020  10:59:46 +0000 (0:00:00.512)       0:00:05.414 ******* 
+changed: [leaf2]
+changed: [spine1]
+changed: [leaf1]
+
+TASK [juniper_stanza_forwarding_options : building forwarding_options configuration] ****************************************************
+Wednesday 01 April 2020  10:59:47 +0000 (0:00:00.425)       0:00:05.839 ******* 
+changed: [spine1]
+changed: [leaf2]
+changed: [leaf1]
+
+TASK [juniper_stanza_routing_instances : building routing_instances configuration] ******************************************************
+Wednesday 01 April 2020  10:59:47 +0000 (0:00:00.421)       0:00:06.260 ******* 
+changed: [leaf1]
+changed: [spine1]
+changed: [leaf2]
+
+TASK [juniper_stanza_routing_options : building routing_options configuration] **********************************************************
+Wednesday 01 April 2020  10:59:48 +0000 (0:00:00.502)       0:00:06.762 ******* 
+changed: [spine1]
+changed: [leaf1]
+changed: [leaf2]
+
+TASK [juniper_stanza_protocols : building protocols configuration] **********************************************************************
+Wednesday 01 April 2020  10:59:48 +0000 (0:00:00.463)       0:00:07.226 ******* 
+changed: [spine1]
+changed: [leaf2]
+changed: [leaf1]
+
+TASK [juniper_stanza_policy_options : building policy_options configuration] ************************************************************
+Wednesday 01 April 2020  10:59:49 +0000 (0:00:00.578)       0:00:07.805 ******* 
+changed: [leaf2]
+changed: [leaf1]
+changed: [spine1]
+
+TASK [juniper_stanza_class_of_service : building class_of_service configuration] ********************************************************
+Wednesday 01 April 2020  10:59:49 +0000 (0:00:00.478)       0:00:08.283 ******* 
+changed: [leaf1]
+changed: [spine1]
+changed: [leaf2]
+
+TASK [juniper_stanza_firewall : building firewall configuration] ************************************************************************
+Wednesday 01 April 2020  10:59:50 +0000 (0:00:00.477)       0:00:08.761 ******* 
+changed: [leaf1]
+changed: [leaf2]
+changed: [spine1]
+
+TASK [juniper_stanza_switch_options : building switch_options configuration] ************************************************************
+Wednesday 01 April 2020  10:59:50 +0000 (0:00:00.582)       0:00:09.343 ******* 
+changed: [spine1]
+changed: [leaf1]
+changed: [leaf2]
+
+TASK [juniper_stanza_poe : building poe configuration] **********************************************************************************
+Wednesday 01 April 2020  10:59:51 +0000 (0:00:00.444)       0:00:09.788 ******* 
+changed: [leaf2]
+changed: [spine1]
+changed: [leaf1]
+
+TASK [juniper_stanza_virtual_chassis : building virtual-chassis configuration] **********************************************************
+Wednesday 01 April 2020  10:59:51 +0000 (0:00:00.403)       0:00:10.191 ******* 
+skipping: [spine1]
+skipping: [leaf1]
+skipping: [leaf2]
+
+TASK [juniper_stanza_access : building access configuration] ****************************************************************************
+Wednesday 01 April 2020  10:59:51 +0000 (0:00:00.049)       0:00:10.241 ******* 
+changed: [spine1]
+changed: [leaf1]
+changed: [leaf2]
+
+TASK [juniper_stanza_vlans : building vlans configuration] ******************************************************************************
+Wednesday 01 April 2020  10:59:52 +0000 (0:00:00.432)       0:00:10.674 ******* 
+changed: [spine1]
+changed: [leaf1]
+changed: [leaf2]
+
+TASK [juniper_assemble_config : check if directory is present] **************************************************************************
+Wednesday 01 April 2020  10:59:52 +0000 (0:00:00.431)       0:00:11.105 ******* 
+ok: [spine1]
+
+TASK [juniper_assemble_config : assemble configurations and copy to configuration] ******************************************************
+Wednesday 01 April 2020  10:59:52 +0000 (0:00:00.208)       0:00:11.314 ******* 
+changed: [leaf2]
+changed: [spine1]
+changed: [leaf1]
+
+TASK [juniper_assemble_config : Remove blank lines between matches] *********************************************************************
+Wednesday 01 April 2020  10:59:53 +0000 (0:00:00.403)       0:00:11.718 ******* 
+changed: [leaf2]
+changed: [spine1]
+changed: [leaf1]
+
+PLAY [all] ******************************************************************************************************************************
+
+TASK [juniper_configuration_apply : ### APPLY CANDIDATE CONFIGURATION ON REMOTE DEVICE ###] *********************************************
+Wednesday 01 April 2020  10:59:53 +0000 (0:00:00.418)       0:00:12.136 ******* 
+fatal: [leaf2]: FAILED! => changed=false 
+  module_stderr: |-
+    /opt/app-root/lib/python3.6/site-packages/jnpr/junos/device.py:824: RuntimeWarning: An unknown exception occured - please report.
+      RuntimeWarning)
+    Traceback (most recent call last):
+      File "/root/.ansible/tmp/ansible-tmp-1585738793.7102664-122650931399704/AnsiballZ_juniper_junos_config.py", line 114, in <module>
+        _ansiballz_main()
+      File "/root/.ansible/tmp/ansible-tmp-1585738793.7102664-122650931399704/AnsiballZ_juniper_junos_config.py", line 106, in _ansiballz_main
+        invoke_module(zipped_mod, temp_path, ANSIBALLZ_PARAMS)
+      File "/root/.ansible/tmp/ansible-tmp-1585738793.7102664-122650931399704/AnsiballZ_juniper_junos_config.py", line 49, in invoke_module
+        imp.load_module('__main__', mod, module, MOD_DESC)
+      File "/opt/app-root/lib64/python3.6/imp.py", line 235, in load_module
+        return load_source(name, filename, file)
+      File "/opt/app-root/lib64/python3.6/imp.py", line 170, in load_source
+        module = _exec(spec, sys.modules[name])
+      File "<frozen importlib._bootstrap>", line 618, in _exec
+      File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+      File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+      File "/tmp/ansible_juniper_junos_config_payload_qm73d9qr/__main__.py", line 1143, in <module>
+      File "/tmp/ansible_juniper_junos_config_payload_qm73d9qr/__main__.py", line 1037, in main
+      File "/tmp/ansible_juniper_junos_config_payload_qm73d9qr/ansible_juniper_junos_config_payload.zip/ansible/module_utils/juniper_junos_common.py", line 1643, in load_configuration
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/utils/config.py", line 559, in load
+        ignore_warning=ignore_warning)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/utils/config.py", line 471, in try_load
+        **rpc_xattrs)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/rpcmeta.py", line 280, in load_config
+        return self._junos.execute(rpc, ignore_warning=ignore_warning)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/decorators.py", line 76, in wrapper
+        return function(*args, **kwargs)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/decorators.py", line 31, in wrapper
+        return function(*args, **kwargs)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/device.py", line 800, in execute
+        'filter_xml'))
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/decorators.py", line 116, in wrapper
+        rsp = function(self, *args, **kwargs)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/device.py", line 1382, in _rpc_reply
+        return self._conn.rpc(rpc_cmd_e, filter_xml)._NCElement__doc
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/manager.py", line 236, in execute
+        huge_tree=self._huge_tree).request(*args, **kwds)
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/operations/third_party/juniper/rpc.py", line 52, in request
+        return self._request(rpc)
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/operations/rpc.py", line 338, in _request
+        self._reply.parse()
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/operations/rpc.py", line 148, in parse
+        root = self._root = to_ele(self._raw, huge_tree=self._huge_tree) # The <rpc-reply> element
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/xml_.py", line 124, in to_ele
+        return x if etree.iselement(x) else etree.fromstring(x.encode('UTF-8'), parser=_get_parser(huge_tree))
+      File "src/lxml/etree.pyx", line 3235, in lxml.etree.fromstring
+      File "src/lxml/parser.pxi", line 1876, in lxml.etree._parseMemoryDocument
+      File "src/lxml/parser.pxi", line 1764, in lxml.etree._parseDoc
+      File "src/lxml/parser.pxi", line 1127, in lxml.etree._BaseParser._parseDoc
+      File "src/lxml/parser.pxi", line 601, in lxml.etree._ParserContext._handleParseResultDoc
+      File "src/lxml/parser.pxi", line 711, in lxml.etree._handleParseResult
+      File "src/lxml/parser.pxi", line 640, in lxml.etree._raiseParseError
+      File "<string>", line 11
+    lxml.etree.XMLSyntaxError: EndTag: '</' not found, line 11, column 30
+  module_stdout: ''
+  msg: |-
+    MODULE FAILURE
+    See stdout/stderr for the exact error
+  rc: 1
+fatal: [leaf1]: FAILED! => changed=false 
+  module_stderr: |-
+    /opt/app-root/lib/python3.6/site-packages/jnpr/junos/device.py:824: RuntimeWarning: An unknown exception occured - please report.
+      RuntimeWarning)
+    Traceback (most recent call last):
+      File "/root/.ansible/tmp/ansible-tmp-1585738793.6908503-55954755278986/AnsiballZ_juniper_junos_config.py", line 114, in <module>
+        _ansiballz_main()
+      File "/root/.ansible/tmp/ansible-tmp-1585738793.6908503-55954755278986/AnsiballZ_juniper_junos_config.py", line 106, in _ansiballz_main
+        invoke_module(zipped_mod, temp_path, ANSIBALLZ_PARAMS)
+      File "/root/.ansible/tmp/ansible-tmp-1585738793.6908503-55954755278986/AnsiballZ_juniper_junos_config.py", line 49, in invoke_module
+        imp.load_module('__main__', mod, module, MOD_DESC)
+      File "/opt/app-root/lib64/python3.6/imp.py", line 235, in load_module
+        return load_source(name, filename, file)
+      File "/opt/app-root/lib64/python3.6/imp.py", line 170, in load_source
+        module = _exec(spec, sys.modules[name])
+      File "<frozen importlib._bootstrap>", line 618, in _exec
+      File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+      File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+      File "/tmp/ansible_juniper_junos_config_payload_k5ymcy01/__main__.py", line 1143, in <module>
+      File "/tmp/ansible_juniper_junos_config_payload_k5ymcy01/__main__.py", line 1037, in main
+      File "/tmp/ansible_juniper_junos_config_payload_k5ymcy01/ansible_juniper_junos_config_payload.zip/ansible/module_utils/juniper_junos_common.py", line 1643, in load_configuration
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/utils/config.py", line 559, in load
+        ignore_warning=ignore_warning)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/utils/config.py", line 471, in try_load
+        **rpc_xattrs)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/rpcmeta.py", line 280, in load_config
+        return self._junos.execute(rpc, ignore_warning=ignore_warning)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/decorators.py", line 76, in wrapper
+        return function(*args, **kwargs)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/decorators.py", line 31, in wrapper
+        return function(*args, **kwargs)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/device.py", line 800, in execute
+        'filter_xml'))
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/decorators.py", line 116, in wrapper
+        rsp = function(self, *args, **kwargs)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/device.py", line 1382, in _rpc_reply
+        return self._conn.rpc(rpc_cmd_e, filter_xml)._NCElement__doc
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/manager.py", line 236, in execute
+        huge_tree=self._huge_tree).request(*args, **kwds)
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/operations/third_party/juniper/rpc.py", line 52, in request
+        return self._request(rpc)
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/operations/rpc.py", line 338, in _request
+        self._reply.parse()
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/operations/rpc.py", line 148, in parse
+        root = self._root = to_ele(self._raw, huge_tree=self._huge_tree) # The <rpc-reply> element
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/xml_.py", line 124, in to_ele
+        return x if etree.iselement(x) else etree.fromstring(x.encode('UTF-8'), parser=_get_parser(huge_tree))
+      File "src/lxml/etree.pyx", line 3235, in lxml.etree.fromstring
+      File "src/lxml/parser.pxi", line 1876, in lxml.etree._parseMemoryDocument
+      File "src/lxml/parser.pxi", line 1764, in lxml.etree._parseDoc
+      File "src/lxml/parser.pxi", line 1127, in lxml.etree._BaseParser._parseDoc
+      File "src/lxml/parser.pxi", line 601, in lxml.etree._ParserContext._handleParseResultDoc
+      File "src/lxml/parser.pxi", line 711, in lxml.etree._handleParseResult
+      File "src/lxml/parser.pxi", line 640, in lxml.etree._raiseParseError
+      File "<string>", line 11
+    lxml.etree.XMLSyntaxError: EndTag: '</' not found, line 11, column 30
+  module_stdout: ''
+  msg: |-
+    MODULE FAILURE
+    See stdout/stderr for the exact error
+  rc: 1
+fatal: [spine1]: FAILED! => changed=false 
+  module_stderr: |-
+    /opt/app-root/lib/python3.6/site-packages/jnpr/junos/device.py:824: RuntimeWarning: An unknown exception occured - please report.
+      RuntimeWarning)
+    Traceback (most recent call last):
+      File "/root/.ansible/tmp/ansible-tmp-1585738793.668048-13248002305263/AnsiballZ_juniper_junos_config.py", line 114, in <module>
+        _ansiballz_main()
+      File "/root/.ansible/tmp/ansible-tmp-1585738793.668048-13248002305263/AnsiballZ_juniper_junos_config.py", line 106, in _ansiballz_main
+        invoke_module(zipped_mod, temp_path, ANSIBALLZ_PARAMS)
+      File "/root/.ansible/tmp/ansible-tmp-1585738793.668048-13248002305263/AnsiballZ_juniper_junos_config.py", line 49, in invoke_module
+        imp.load_module('__main__', mod, module, MOD_DESC)
+      File "/opt/app-root/lib64/python3.6/imp.py", line 235, in load_module
+        return load_source(name, filename, file)
+      File "/opt/app-root/lib64/python3.6/imp.py", line 170, in load_source
+        module = _exec(spec, sys.modules[name])
+      File "<frozen importlib._bootstrap>", line 618, in _exec
+      File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+      File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+      File "/tmp/ansible_juniper_junos_config_payload_rfmsqhm7/__main__.py", line 1143, in <module>
+      File "/tmp/ansible_juniper_junos_config_payload_rfmsqhm7/__main__.py", line 1037, in main
+      File "/tmp/ansible_juniper_junos_config_payload_rfmsqhm7/ansible_juniper_junos_config_payload.zip/ansible/module_utils/juniper_junos_common.py", line 1643, in load_configuration
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/utils/config.py", line 559, in load
+        ignore_warning=ignore_warning)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/utils/config.py", line 471, in try_load
+        **rpc_xattrs)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/rpcmeta.py", line 280, in load_config
+        return self._junos.execute(rpc, ignore_warning=ignore_warning)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/decorators.py", line 76, in wrapper
+        return function(*args, **kwargs)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/decorators.py", line 31, in wrapper
+        return function(*args, **kwargs)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/device.py", line 800, in execute
+        'filter_xml'))
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/decorators.py", line 116, in wrapper
+        rsp = function(self, *args, **kwargs)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/device.py", line 1382, in _rpc_reply
+        return self._conn.rpc(rpc_cmd_e, filter_xml)._NCElement__doc
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/manager.py", line 236, in execute
+        huge_tree=self._huge_tree).request(*args, **kwds)
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/operations/third_party/juniper/rpc.py", line 52, in request
+        return self._request(rpc)
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/operations/rpc.py", line 338, in _request
+        self._reply.parse()
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/operations/rpc.py", line 148, in parse
+        root = self._root = to_ele(self._raw, huge_tree=self._huge_tree) # The <rpc-reply> element
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/xml_.py", line 124, in to_ele
+        return x if etree.iselement(x) else etree.fromstring(x.encode('UTF-8'), parser=_get_parser(huge_tree))
+      File "src/lxml/etree.pyx", line 3235, in lxml.etree.fromstring
+      File "src/lxml/parser.pxi", line 1876, in lxml.etree._parseMemoryDocument
+      File "src/lxml/parser.pxi", line 1764, in lxml.etree._parseDoc
+      File "src/lxml/parser.pxi", line 1127, in lxml.etree._BaseParser._parseDoc
+      File "src/lxml/parser.pxi", line 601, in lxml.etree._ParserContext._handleParseResultDoc
+      File "src/lxml/parser.pxi", line 711, in lxml.etree._handleParseResult
+      File "src/lxml/parser.pxi", line 640, in lxml.etree._raiseParseError
+      File "<string>", line 11
+    lxml.etree.XMLSyntaxError: EndTag: '</' not found, line 11, column 30
+  module_stdout: ''
+  msg: |-
+    MODULE FAILURE
+    See stdout/stderr for the exact error
+  rc: 1
+
+PLAY RECAP ******************************************************************************************************************************
+leaf1                      : ok=26   changed=25   unreachable=0    failed=1    skipped=4    rescued=0    ignored=0   
+leaf2                      : ok=26   changed=25   unreachable=0    failed=1    skipped=4    rescued=0    ignored=0   
+spine1                     : ok=29   changed=24   unreachable=0    failed=1    skipped=4    rescued=0    ignored=0   
+
+Wednesday 01 April 2020  10:59:56 +0000 (0:00:02.615)       0:00:14.752 ******* 
+=============================================================================== 
+juniper_configuration_apply : ### APPLY CANDIDATE CONFIGURATION ON REMOTE DEVICE ### --------------------------------------------- 2.62s
+juniper_stanza_version : building version configuration -------------------------------------------------------------------------- 0.83s
+juniper_stanza_system : building system configuration ---------------------------------------------------------------------------- 0.61s
+juniper_stanza_firewall : building firewall configuration ------------------------------------------------------------------------ 0.58s
+juniper_stanza_protocols : building protocols configuration ---------------------------------------------------------------------- 0.58s
+juniper_stanza_groups : building groups configuration ---------------------------------------------------------------------------- 0.58s
+juniper_stanza_interfaces : building interfaces configuration -------------------------------------------------------------------- 0.51s
+juniper_stanza_routing_instances : building routing_instances configuration ------------------------------------------------------ 0.50s
+juniper_stanza_policy_options : building policy_options configuration ------------------------------------------------------------ 0.48s
+juniper_stanza_class_of_service : building class_of_service configuration -------------------------------------------------------- 0.48s
+juniper_stanza_chassis : building chassis configuration -------------------------------------------------------------------------- 0.47s
+juniper_stanza_routing_options : building routing_options configuration ---------------------------------------------------------- 0.46s
+juniper_stanza_switch_options : building switch_options configuration ------------------------------------------------------------ 0.44s
+juniper_stanza_apply_groups : building apply_groups configuration ---------------------------------------------------------------- 0.44s
+juniper_stanza_access : building access configuration ---------------------------------------------------------------------------- 0.43s
+juniper_stanza_vlans : building vlans configuration ------------------------------------------------------------------------------ 0.43s
+juniper_stanza_snmp : building snmp configuration -------------------------------------------------------------------------------- 0.43s
+juniper_stanza_forwarding_options : building forwarding_options configuration ---------------------------------------------------- 0.42s
+juniper_assemble_config : Remove blank lines between matches --------------------------------------------------------------------- 0.42s
+juniper_assemble_config : assemble configurations and copy to configuration ------------------------------------------------------ 0.40s
+
+ 🐍 app-root  ✘ ⚡  ds9  ansible   master ✘ ✖ ✹  17s 
+#  pip freeze | grep ansible
+ansible==2.8.8
+ansible-tower-cli==3.3.9
+
+ 🐍 app-root  ⚡  ds9  ansible   master ✘ ✖ ✹ 
+#  pip freeze | grep junos  
+junos-eznc==2.3.2
+
+ 🐍 app-root  ⚡  ds9  ansible   master ✘ ✖ ✹ 
+#  exit
+ packetferret@twitch-dev  ~/development/packetferret/cocabona   master ●  make build                              ✔  52  06:01:26
+docker build -t packetferret/cocabona:0.1.0 docker/
+Sending build context to Docker daemon  28.67kB
+Step 1/25 : FROM centos/python-36-centos7:latest
+ ---> a56ff7cd1d56
+Step 2/25 : LABEL name="cocabona"
+ ---> Using cache
+ ---> 25a8a16fd217
+Step 3/25 : LABEL maintainer="packetferret@gmail.com"
+ ---> Using cache
+ ---> bb87f7677a05
+Step 4/25 : LABEL description="ansible juniper container"
+ ---> Using cache
+ ---> f3320ed8e1c8
+Step 5/25 : LABEL license="GPLv2"
+ ---> Using cache
+ ---> bd927006bfda
+Step 6/25 : LABEL url="https://github.com/packetferret/cocabona"
+ ---> Using cache
+ ---> 2fcdbea4dceb
+Step 7/25 : LABEL build-date="20200322"
+ ---> Using cache
+ ---> 7b46cb95507d
+Step 8/25 : USER root
+ ---> Using cache
+ ---> 01e32b3b412f
+Step 9/25 : RUN yum -y update
+ ---> Using cache
+ ---> 45673bd6bbd1
+Step 10/25 : RUN yum -y install vim nmap wget telnet zsh tree
+ ---> Using cache
+ ---> 15d1a6f0359a
+Step 11/25 : RUN yum clean all
+ ---> Using cache
+ ---> 9c6071e119b4
+Step 12/25 : RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
+ ---> Using cache
+ ---> 1e38ddbcf2c1
+Step 13/25 : RUN rm -rf /tmp/* /var/tmp/*
+ ---> Using cache
+ ---> 5e38ef8f52dc
+Step 14/25 : WORKDIR /home/tmp/files
+ ---> Using cache
+ ---> 963ee4ed2c8a
+Step 15/25 : ADD config/requirements.txt requirements.txt
+ ---> e087c8435350
+Step 16/25 : RUN pip install -r requirements.txt
+ ---> Running in 69ce1537faa9
+Collecting ansible==2.8.8 (from -r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/68/43/92d5b1921f38b01a7af4e4b39233f25a4512b62fa69a8c757e76a4601596/ansible-2.8.8.tar.gz (12.7MB)
+Collecting ansible-tower-cli (from -r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/8a/66/41bd697517ae2d8aaaaa36715dc61a5a918eaf1d9b4f9e5e5fbe6d6bdf0d/ansible-tower-cli-3.3.9.tar.gz (203kB)
+Collecting jsnapy (from -r requirements.txt (line 3))
+  Downloading https://files.pythonhosted.org/packages/78/88/ba554e61c95363532ef4018bca797cf9b8163ea17be9dc01dd0960c3542c/jsnapy-1.3.4.tar.gz (57kB)
+Collecting junos-eznc==2.3.1 (from -r requirements.txt (line 4))
+  Downloading https://files.pythonhosted.org/packages/a4/e4/fb653711f079424922bd93ab931b3ee63c7f0e69bf7e9c7067cb42493072/junos_eznc-2.3.1-py2.py3-none-any.whl (191kB)
+Collecting jxmlease (from -r requirements.txt (line 5))
+  Downloading https://files.pythonhosted.org/packages/61/66/aea1d3ab6c45bc7653a0d31afcc7b38614ee74c4f205622b668aa175726c/jxmlease-1.0.1-py2.py3-none-any.whl
+Collecting lxml (from -r requirements.txt (line 6))
+  Downloading https://files.pythonhosted.org/packages/dd/ba/a0e6866057fc0bbd17192925c1d63a3b85cf522965de9bc02364d08e5b84/lxml-4.5.0-cp36-cp36m-manylinux1_x86_64.whl (5.8MB)
+Collecting ncclient (from -r requirements.txt (line 7))
+  Downloading https://files.pythonhosted.org/packages/dd/7f/700ffea36c4c1c72d7581ef3dc3f40ec9756fd161816cd258cd303cd9f39/ncclient-0.6.7.tar.gz (605kB)
+  Ignoring selectors2: markers 'python_version <= "3.4"' don't match your environment
+Collecting PyYAML (from -r requirements.txt (line 8))
+  Downloading https://files.pythonhosted.org/packages/64/c2/b80047c7ac2478f9501676c988a5411ed5572f35d1beff9cae07d321512c/PyYAML-5.3.1.tar.gz (269kB)
+Collecting regex (from -r requirements.txt (line 9))
+  Downloading https://files.pythonhosted.org/packages/ed/36/fd20c656fb4a4fbe8db367ea274c3465b81cb2e01ffc57b9980f0578e131/regex-2020.2.20-cp36-cp36m-manylinux1_x86_64.whl (690kB)
+Collecting requests (from -r requirements.txt (line 10))
+  Downloading https://files.pythonhosted.org/packages/1a/70/1935c770cb3be6e3a8b78ced23d7e0f3b187f5cbfab4749523ed65d7c9b1/requests-2.23.0-py2.py3-none-any.whl (58kB)
+Collecting urllib3 (from -r requirements.txt (line 11))
+  Downloading https://files.pythonhosted.org/packages/e8/74/6e4f91745020f967d09332bb2b8b9b10090957334692eb88ea4afe91b77f/urllib3-1.25.8-py2.py3-none-any.whl (125kB)
+Collecting xmltodict (from -r requirements.txt (line 12))
+  Downloading https://files.pythonhosted.org/packages/28/fd/30d5c1d3ac29ce229f6bdc40bbc20b28f716e8b363140c26eff19122d8a5/xmltodict-0.12.0-py2.py3-none-any.whl
+Collecting jinja2 (from ansible==2.8.8->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/27/24/4f35961e5c669e96f6559760042a55b9bcfcdb82b9bdb3c8753dbe042e35/Jinja2-2.11.1-py2.py3-none-any.whl (126kB)
+Collecting cryptography (from ansible==2.8.8->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/45/73/d18a8884de8bffdcda475728008b5b13be7fbef40a2acc81a0d5d524175d/cryptography-2.8-cp34-abi3-manylinux1_x86_64.whl (2.3MB)
+Collecting click<7.0 (from ansible-tower-cli->-r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/34/c1/8806f99713ddb993c5366c362b2f908f18269f8d792aff1abfd700775a77/click-6.7-py2.py3-none-any.whl (71kB)
+Collecting colorama>=0.3.1 (from ansible-tower-cli->-r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/c9/dc/45cdef1b4d119eb96316b3117e6d5708a08029992b2fee2c143c7a0a5cc5/colorama-0.4.3-py2.py3-none-any.whl
+Collecting six>=1.7.2 (from ansible-tower-cli->-r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/65/eb/1f97cb97bfc2390a276969c6fae16075da282f5058082d4cb10c6c5c1dba/six-1.14.0-py2.py3-none-any.whl
+Collecting configparser (from jsnapy->-r requirements.txt (line 3))
+  Downloading https://files.pythonhosted.org/packages/4b/6b/01baa293090240cf0562cc5eccb69c6f5006282127f2b846fad011305c79/configparser-5.0.0-py3-none-any.whl
+Collecting pyparsing (from jsnapy->-r requirements.txt (line 3))
+  Downloading https://files.pythonhosted.org/packages/5d/bc/1e58593167fade7b544bfe9502a26dc860940a79ab306e651e7f13be68c2/pyparsing-2.4.6-py2.py3-none-any.whl (67kB)
+Collecting icdiff (from jsnapy->-r requirements.txt (line 3))
+  Downloading https://files.pythonhosted.org/packages/8f/7d/a6ae9d58faa076bda8930c167204cac14d44941cba60c2642e2f4aac6c44/icdiff-1.9.1.tar.gz
+Collecting future (from jsnapy->-r requirements.txt (line 3))
+  Downloading https://files.pythonhosted.org/packages/45/0b/38b06fd9b92dc2b68d58b75f900e97884c45bedd2ff83203d933cf5851c9/future-0.18.2.tar.gz (829kB)
+Collecting scp>=0.7.0 (from junos-eznc==2.3.1->-r requirements.txt (line 4))
+  Downloading https://files.pythonhosted.org/packages/4d/7a/3d76dc5ad8deea79642f50a572e1c057cb27e8b427f83781a2c05ce4e5b6/scp-0.13.2-py2.py3-none-any.whl
+Collecting transitions (from junos-eznc==2.3.1->-r requirements.txt (line 4))
+  Downloading https://files.pythonhosted.org/packages/38/62/f4e2453f11761861dd303d0b1df582a32271bdfe9a761633489d00cee414/transitions-0.8.0-py2.py3-none-any.whl (71kB)
+Collecting netaddr (from junos-eznc==2.3.1->-r requirements.txt (line 4))
+  Downloading https://files.pythonhosted.org/packages/ba/97/ce14451a9fd7bdb5a397abf99b24a1a6bb7a1a440b019bebd2e9a0dbec74/netaddr-0.7.19-py2.py3-none-any.whl (1.6MB)
+Collecting yamlordereddictloader (from junos-eznc==2.3.1->-r requirements.txt (line 4))
+  Downloading https://files.pythonhosted.org/packages/56/e1/1ca77da64cc355f0de483095e841d96f2366f93b095b83869440a296c21d/yamlordereddictloader-0.4.0.tar.gz
+Collecting pyserial (from junos-eznc==2.3.1->-r requirements.txt (line 4))
+  Downloading https://files.pythonhosted.org/packages/0d/e4/2a744dd9e3be04a0c0907414e2a01a7c88bb3915cbe3c8cc06e209f59c30/pyserial-3.4-py2.py3-none-any.whl (193kB)
+Collecting paramiko>=1.15.2 (from junos-eznc==2.3.1->-r requirements.txt (line 4))
+  Downloading https://files.pythonhosted.org/packages/06/1e/1e08baaaf6c3d3df1459fd85f0e7d2d6aa916f33958f151ee1ecc9800971/paramiko-2.7.1-py2.py3-none-any.whl (206kB)
+Requirement already satisfied: setuptools>0.6 in /opt/app-root/lib/python3.6/site-packages (from ncclient->-r requirements.txt (line 7))
+Collecting chardet<4,>=3.0.2 (from requests->-r requirements.txt (line 10))
+  Downloading https://files.pythonhosted.org/packages/bc/a9/01ffebfb562e4274b6487b4bb1ddec7ca55ec7510b22e4c51f14098443b8/chardet-3.0.4-py2.py3-none-any.whl (133kB)
+Collecting certifi>=2017.4.17 (from requests->-r requirements.txt (line 10))
+  Downloading https://files.pythonhosted.org/packages/b9/63/df50cac98ea0d5b006c55a399c3bf1db9da7b5a24de7890bc9cfd5dd9e99/certifi-2019.11.28-py2.py3-none-any.whl (156kB)
+Collecting idna<3,>=2.5 (from requests->-r requirements.txt (line 10))
+  Downloading https://files.pythonhosted.org/packages/89/e3/afebe61c546d18fb1709a61bee788254b40e736cff7271c7de5de2dc4128/idna-2.9-py2.py3-none-any.whl (58kB)
+Collecting MarkupSafe>=0.23 (from jinja2->ansible==2.8.8->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/b2/5f/23e0023be6bb885d00ffbefad2942bc51a620328ee910f64abe5a8d18dd1/MarkupSafe-1.1.1-cp36-cp36m-manylinux1_x86_64.whl
+Collecting cffi!=1.11.3,>=1.8 (from cryptography->ansible==2.8.8->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/f1/c7/72abda280893609e1ddfff90f8064568bd8bcb2c1770a9d5bb5edb2d1fea/cffi-1.14.0-cp36-cp36m-manylinux1_x86_64.whl (399kB)
+Collecting bcrypt>=3.1.3 (from paramiko>=1.15.2->junos-eznc==2.3.1->-r requirements.txt (line 4))
+  Downloading https://files.pythonhosted.org/packages/8b/1d/82826443777dd4a624e38a08957b975e75df859b381ae302cfd7a30783ed/bcrypt-3.1.7-cp34-abi3-manylinux1_x86_64.whl (56kB)
+Collecting pynacl>=1.0.1 (from paramiko>=1.15.2->junos-eznc==2.3.1->-r requirements.txt (line 4))
+  Downloading https://files.pythonhosted.org/packages/27/15/2cd0a203f318c2240b42cd9dd13c931ddd61067809fee3479f44f086103e/PyNaCl-1.3.0-cp34-abi3-manylinux1_x86_64.whl (759kB)
+Collecting pycparser (from cffi!=1.11.3,>=1.8->cryptography->ansible==2.8.8->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/ae/e7/d9c3a176ca4b02024debf82342dab36efadfc5776f9c8db077e8f6e71821/pycparser-2.20-py2.py3-none-any.whl (112kB)
+Installing collected packages: MarkupSafe, jinja2, PyYAML, pycparser, cffi, six, cryptography, ansible, click, colorama, urllib3, chardet, certifi, idna, requests, ansible-tower-cli, pyparsing, bcrypt, pynacl, paramiko, scp, lxml, transitions, netaddr, ncclient, yamlordereddictloader, pyserial, junos-eznc, configparser, icdiff, future, jsnapy, jxmlease, regex, xmltodict
+  Running setup.py install for PyYAML: started
+    Running setup.py install for PyYAML: finished with status 'done'
+  Running setup.py install for ansible: started
+    Running setup.py install for ansible: finished with status 'done'
+  Running setup.py install for ansible-tower-cli: started
+    Running setup.py install for ansible-tower-cli: finished with status 'done'
+  Running setup.py install for ncclient: started
+    Running setup.py install for ncclient: finished with status 'done'
+  Running setup.py install for yamlordereddictloader: started
+    Running setup.py install for yamlordereddictloader: finished with status 'done'
+  Running setup.py install for icdiff: started
+    Running setup.py install for icdiff: finished with status 'done'
+  Running setup.py install for future: started
+    Running setup.py install for future: finished with status 'done'
+  Running setup.py install for jsnapy: started
+    Running setup.py install for jsnapy: finished with status 'done'
+Successfully installed MarkupSafe-1.1.1 PyYAML-5.3.1 ansible-2.8.8 ansible-tower-cli-3.3.9 bcrypt-3.1.7 certifi-2019.11.28 cffi-1.14.0 chardet-3.0.4 click-6.7 colorama-0.4.3 configparser-5.0.0 cryptography-2.8 future-0.18.2 icdiff-1.9.1 idna-2.9 jinja2-2.11.1 jsnapy-1.3.4 junos-eznc-2.3.1 jxmlease-1.0.1 lxml-4.5.0 ncclient-0.6.7 netaddr-0.7.19 paramiko-2.7.1 pycparser-2.20 pynacl-1.3.0 pyparsing-2.4.6 pyserial-3.4 regex-2020.2.20 requests-2.23.0 scp-0.13.2 six-1.14.0 transitions-0.8.0 urllib3-1.25.8 xmltodict-0.12.0 yamlordereddictloader-0.4.0
+You are using pip version 9.0.1, however version 20.0.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Removing intermediate container 69ce1537faa9
+ ---> c727e662bd77
+Step 17/25 : RUN pip install --upgrade pip
+ ---> Running in 78376bf32383
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/54/0c/d01aa759fdc501a58f431eb594a17495f15b88da142ce14b5845662c13f3/pip-20.0.2-py2.py3-none-any.whl (1.4MB)
+Installing collected packages: pip
+  Found existing installation: pip 9.0.1
+    Uninstalling pip-9.0.1:
+      Successfully uninstalled pip-9.0.1
+Successfully installed pip-20.0.2
+Removing intermediate container 78376bf32383
+ ---> f778a95c2b5c
+Step 18/25 : RUN ansible-galaxy install juniper.junos
+ ---> Running in 6ef4e717e484
+- downloading role 'junos', owned by juniper
+- downloading role from https://github.com/Juniper/ansible-junos-stdlib/archive/2.3.0.tar.gz
+- extracting juniper.junos to /opt/app-root/src/.ansible/roles/juniper.junos
+- juniper.junos (2.3.0) was installed successfully
+Removing intermediate container 6ef4e717e484
+ ---> d373ce4c9036
+Step 19/25 : COPY config/jsnapy.cfg /etc/jsnapy/jsnapy.cfg
+ ---> 425bc8a4dc33
+Step 20/25 : COPY config/.zshrc /opt/app-root/src/.zshrc
+ ---> bc866526fa21
+Step 21/25 : COPY config/bullet-train_custom.zsh-theme /opt/app-root/src/.oh-my-zsh/themes/bullet-train_custom.zsh-theme
+ ---> 5d9003449308
+Step 22/25 : WORKDIR /opt/app-root/src/ansible
+ ---> Running in d7a1bd153fea
+Removing intermediate container d7a1bd153fea
+ ---> 9d9a0c0e377c
+Step 23/25 : ENV HAPPY True
+ ---> Running in 4ae890212708
+Removing intermediate container 4ae890212708
+ ---> 763dd1695668
+Step 24/25 : ENV SHELL /usr/bin/zsh
+ ---> Running in 633613433f7f
+Removing intermediate container 633613433f7f
+ ---> 800d1c54a512
+Step 25/25 : ENV ANSIBLE_CONFIG /home/tmp/files/ansible/ansible.cfg
+ ---> Running in 4fa3c4c27cfc
+Removing intermediate container 4fa3c4c27cfc
+ ---> 868358e946e0
+Successfully built 868358e946e0
+Successfully tagged packetferret/cocabona:0.1.0
+ packetferret@twitch-dev  ~/development/packetferret/cocabona   master ●  make run                                ✔  53  06:02:53
+docker run -it \
+-v /home/packetferret/development/packetferret/cocabona:/home/tmp/files \
+-w /home/tmp/files \
+packetferret/cocabona:0.1.0 /usr/bin/zsh
+
+ 🐍 app-root  ⚡  ds9  files   master ✘ ✖ ✹ 
+#  cd ansible 
+
+ 🐍 app-root  ⚡  ds9  ansible   master ✘ ✖ ✹ 
+#  ansible-playbook pb.configuration.network.yml 
+
+PLAY [all] ******************************************************************************************************************************
+
+TASK [Check ansible version >=2.7.8] ****************************************************************************************************
+Wednesday 01 April 2020  11:04:08 +0000 (0:00:00.192)       0:00:00.193 ******* 
+ok: [spine1] => changed=false 
+  msg: All assertions passed
+
+PLAY [all] ******************************************************************************************************************************
+
+TASK [localhost-build-dirs : Build local directories to hold output files] **************************************************************
+Wednesday 01 April 2020  11:04:08 +0000 (0:00:00.042)       0:00:00.235 ******* 
+ok: [spine1] => 
+  msg: Check roles/localhost-build-dirs/defaults/main.yml
+
+TASK [localhost-build-dirs : remove previous temporary build directory] *****************************************************************
+Wednesday 01 April 2020  11:04:08 +0000 (0:00:00.020)       0:00:00.256 ******* 
+ok: [leaf2]
+ok: [leaf1]
+ok: [spine1]
+
+TASK [localhost-build-dirs : create new temporary directory] ****************************************************************************
+Wednesday 01 April 2020  11:04:09 +0000 (0:00:00.376)       0:00:00.633 ******* 
+changed: [leaf2]
+changed: [leaf1]
+changed: [spine1]
+
+TASK [localhost-build-dirs : remove previous facts directory] ***************************************************************************
+Wednesday 01 April 2020  11:04:09 +0000 (0:00:00.229)       0:00:00.862 ******* 
+changed: [spine1]
+changed: [leaf1]
+changed: [leaf2]
+
+TASK [localhost-build-dirs : create facts directory] ************************************************************************************
+Wednesday 01 April 2020  11:04:09 +0000 (0:00:00.232)       0:00:01.094 ******* 
+changed: [leaf1]
+changed: [leaf2]
+changed: [spine1]
+
+TASK [localhost-build-dirs : remove any previous config directory] **********************************************************************
+Wednesday 01 April 2020  11:04:09 +0000 (0:00:00.233)       0:00:01.328 ******* 
+changed: [leaf1]
+fatal: [leaf2]: FAILED! => changed=false 
+  msg: 'rmtree failed: [Errno 2] No such file or directory: ''leaf2.conf'''
+ok: [spine1]
+
+TASK [localhost-build-dirs : create new temporary directory] ****************************************************************************
+Wednesday 01 April 2020  11:04:09 +0000 (0:00:00.244)       0:00:01.573 ******* 
+changed: [spine1]
+ok: [leaf1]
+
+PLAY [all] ******************************************************************************************************************************
+
+TASK [juniper_stanza_version : building version configuration] **************************************************************************
+Wednesday 01 April 2020  11:04:10 +0000 (0:00:00.250)       0:00:01.823 ******* 
+changed: [spine1]
+changed: [leaf1]
+
+TASK [juniper_stanza_apply_groups : building apply_groups configuration] ****************************************************************
+Wednesday 01 April 2020  11:04:10 +0000 (0:00:00.752)       0:00:02.576 ******* 
+changed: [leaf1]
+changed: [spine1]
+
+TASK [juniper_stanza_groups : building groups configuration] ****************************************************************************
+Wednesday 01 April 2020  11:04:11 +0000 (0:00:00.395)       0:00:02.971 ******* 
+^C [ERROR]: User interrupted execution
+
+
+ 🐍 app-root  ✘ ⚡  ds9  ansible   master ✘ ✖ ✹ 
+#  ansible-playbook pb.configuration.network.yml
+
+PLAY [all] ******************************************************************************************************************************
+
+TASK [Check ansible version >=2.7.8] ****************************************************************************************************
+Wednesday 01 April 2020  11:04:14 +0000 (0:00:00.202)       0:00:00.202 ******* 
+ok: [spine1] => changed=false 
+  msg: All assertions passed
+
+PLAY [all] ******************************************************************************************************************************
+
+TASK [localhost-build-dirs : Build local directories to hold output files] **************************************************************
+Wednesday 01 April 2020  11:04:14 +0000 (0:00:00.044)       0:00:00.247 ******* 
+ok: [spine1] => 
+  msg: Check roles/localhost-build-dirs/defaults/main.yml
+
+TASK [localhost-build-dirs : remove previous temporary build directory] *****************************************************************
+Wednesday 01 April 2020  11:04:14 +0000 (0:00:00.030)       0:00:00.277 ******* 
+changed: [leaf1]
+changed: [leaf2]
+changed: [spine1]
+
+TASK [localhost-build-dirs : create new temporary directory] ****************************************************************************
+Wednesday 01 April 2020  11:04:14 +0000 (0:00:00.382)       0:00:00.660 ******* 
+changed: [leaf2]
+changed: [leaf1]
+changed: [spine1]
+
+TASK [localhost-build-dirs : remove previous facts directory] ***************************************************************************
+Wednesday 01 April 2020  11:04:15 +0000 (0:00:00.234)       0:00:00.894 ******* 
+changed: [spine1]
+changed: [leaf1]
+changed: [leaf2]
+
+TASK [localhost-build-dirs : create facts directory] ************************************************************************************
+Wednesday 01 April 2020  11:04:15 +0000 (0:00:00.251)       0:00:01.146 ******* 
+changed: [leaf1]
+changed: [spine1]
+changed: [leaf2]
+
+TASK [localhost-build-dirs : remove any previous config directory] **********************************************************************
+Wednesday 01 April 2020  11:04:15 +0000 (0:00:00.245)       0:00:01.392 ******* 
+changed: [leaf1]
+ok: [spine1]
+ok: [leaf2]
+
+TASK [localhost-build-dirs : create new temporary directory] ****************************************************************************
+Wednesday 01 April 2020  11:04:15 +0000 (0:00:00.229)       0:00:01.621 ******* 
+ok: [leaf1]
+changed: [spine1]
+ok: [leaf2]
+
+PLAY [all] ******************************************************************************************************************************
+
+TASK [juniper_stanza_version : building version configuration] **************************************************************************
+Wednesday 01 April 2020  11:04:15 +0000 (0:00:00.265)       0:00:01.886 ******* 
+changed: [spine1]
+changed: [leaf1]
+changed: [leaf2]
+
+TASK [juniper_stanza_apply_groups : building apply_groups configuration] ****************************************************************
+Wednesday 01 April 2020  11:04:16 +0000 (0:00:00.791)       0:00:02.678 ******* 
+changed: [spine1]
+changed: [leaf1]
+changed: [leaf2]
+
+TASK [juniper_stanza_groups : building groups configuration] ****************************************************************************
+Wednesday 01 April 2020  11:04:17 +0000 (0:00:00.418)       0:00:03.097 ******* 
+changed: [leaf2]
+changed: [leaf1]
+changed: [spine1]
+
+TASK [juniper_stanza_system : building system configuration] ****************************************************************************
+Wednesday 01 April 2020  11:04:17 +0000 (0:00:00.504)       0:00:03.601 ******* 
+changed: [leaf1]
+changed: [spine1]
+changed: [leaf2]
+
+TASK [juniper_stanza_event_options : building event_options configuration] **************************************************************
+Wednesday 01 April 2020  11:04:18 +0000 (0:00:00.591)       0:00:04.193 ******* 
+skipping: [spine1]
+skipping: [leaf1]
+skipping: [leaf2]
+
+TASK [juniper_stanza_chassis : building chassis configuration] **************************************************************************
+Wednesday 01 April 2020  11:04:18 +0000 (0:00:00.057)       0:00:04.251 ******* 
+changed: [leaf1]
+changed: [spine1]
+changed: [leaf2]
+
+TASK [juniper_stanza_services : building services configuration] ************************************************************************
+Wednesday 01 April 2020  11:04:18 +0000 (0:00:00.459)       0:00:04.711 ******* 
+skipping: [spine1]
+skipping: [leaf1]
+skipping: [leaf2]
+
+TASK [juniper_stanza_security : building security configuration] ************************************************************************
+Wednesday 01 April 2020  11:04:18 +0000 (0:00:00.055)       0:00:04.767 ******* 
+skipping: [spine1]
+skipping: [leaf1]
+skipping: [leaf2]
+
+TASK [juniper_stanza_interfaces : building interfaces configuration] ********************************************************************
+Wednesday 01 April 2020  11:04:18 +0000 (0:00:00.064)       0:00:04.831 ******* 
+changed: [leaf2]
+changed: [spine1]
+changed: [leaf1]
+
+TASK [juniper_stanza_snmp : building snmp configuration] ********************************************************************************
+Wednesday 01 April 2020  11:04:19 +0000 (0:00:00.484)       0:00:05.316 ******* 
+changed: [spine1]
+changed: [leaf2]
+changed: [leaf1]
+
+TASK [juniper_stanza_forwarding_options : building forwarding_options configuration] ****************************************************
+Wednesday 01 April 2020  11:04:19 +0000 (0:00:00.445)       0:00:05.761 ******* 
+changed: [spine1]
+changed: [leaf2]
+changed: [leaf1]
+
+TASK [juniper_stanza_routing_instances : building routing_instances configuration] ******************************************************
+Wednesday 01 April 2020  11:04:20 +0000 (0:00:00.436)       0:00:06.198 ******* 
+changed: [spine1]
+changed: [leaf2]
+changed: [leaf1]
+
+TASK [juniper_stanza_routing_options : building routing_options configuration] **********************************************************
+Wednesday 01 April 2020  11:04:20 +0000 (0:00:00.527)       0:00:06.726 ******* 
+changed: [leaf1]
+changed: [spine1]
+changed: [leaf2]
+
+TASK [juniper_stanza_protocols : building protocols configuration] **********************************************************************
+Wednesday 01 April 2020  11:04:21 +0000 (0:00:00.478)       0:00:07.205 ******* 
+changed: [spine1]
+changed: [leaf1]
+changed: [leaf2]
+
+TASK [juniper_stanza_policy_options : building policy_options configuration] ************************************************************
+Wednesday 01 April 2020  11:04:21 +0000 (0:00:00.602)       0:00:07.807 ******* 
+changed: [spine1]
+changed: [leaf1]
+changed: [leaf2]
+
+TASK [juniper_stanza_class_of_service : building class_of_service configuration] ********************************************************
+Wednesday 01 April 2020  11:04:22 +0000 (0:00:00.541)       0:00:08.348 ******* 
+changed: [spine1]
+changed: [leaf1]
+changed: [leaf2]
+
+TASK [juniper_stanza_firewall : building firewall configuration] ************************************************************************
+Wednesday 01 April 2020  11:04:22 +0000 (0:00:00.474)       0:00:08.822 ******* 
+changed: [leaf1]
+changed: [leaf2]
+changed: [spine1]
+
+TASK [juniper_stanza_switch_options : building switch_options configuration] ************************************************************
+Wednesday 01 April 2020  11:04:23 +0000 (0:00:00.560)       0:00:09.382 ******* 
+changed: [spine1]
+changed: [leaf1]
+changed: [leaf2]
+
+TASK [juniper_stanza_poe : building poe configuration] **********************************************************************************
+Wednesday 01 April 2020  11:04:23 +0000 (0:00:00.490)       0:00:09.873 ******* 
+changed: [leaf1]
+changed: [spine1]
+changed: [leaf2]
+
+TASK [juniper_stanza_virtual_chassis : building virtual-chassis configuration] **********************************************************
+Wednesday 01 April 2020  11:04:24 +0000 (0:00:00.437)       0:00:10.310 ******* 
+skipping: [spine1]
+skipping: [leaf1]
+skipping: [leaf2]
+
+TASK [juniper_stanza_access : building access configuration] ****************************************************************************
+Wednesday 01 April 2020  11:04:24 +0000 (0:00:00.056)       0:00:10.366 ******* 
+changed: [leaf2]
+changed: [leaf1]
+changed: [spine1]
+
+TASK [juniper_stanza_vlans : building vlans configuration] ******************************************************************************
+Wednesday 01 April 2020  11:04:24 +0000 (0:00:00.438)       0:00:10.804 ******* 
+changed: [leaf1]
+changed: [spine1]
+changed: [leaf2]
+
+TASK [juniper_assemble_config : check if directory is present] **************************************************************************
+Wednesday 01 April 2020  11:04:25 +0000 (0:00:00.439)       0:00:11.244 ******* 
+ok: [spine1]
+
+TASK [juniper_assemble_config : assemble configurations and copy to configuration] ******************************************************
+Wednesday 01 April 2020  11:04:25 +0000 (0:00:00.209)       0:00:11.453 ******* 
+changed: [leaf2]
+changed: [leaf1]
+changed: [spine1]
+
+TASK [juniper_assemble_config : Remove blank lines between matches] *********************************************************************
+Wednesday 01 April 2020  11:04:25 +0000 (0:00:00.393)       0:00:11.846 ******* 
+changed: [leaf1]
+changed: [leaf2]
+changed: [spine1]
+
+PLAY [all] ******************************************************************************************************************************
+
+TASK [juniper_configuration_apply : ### APPLY CANDIDATE CONFIGURATION ON REMOTE DEVICE ###] *********************************************
+Wednesday 01 April 2020  11:04:26 +0000 (0:00:00.411)       0:00:12.258 ******* 
+changed: [leaf1]
+changed: [leaf2]
+changed: [spine1]
+
+TASK [juniper_configuration_apply : ### PRINT THE RESULT TO CONSOLE ###] ****************************************************************
+Wednesday 01 April 2020  11:04:56 +0000 (0:00:30.469)       0:00:42.727 ******* 
+ok: [spine1] => 
+  result.diff_lines:
+  - ''
+  - '[edit]'
+  - + groups {
+  - +     GLOBAL_ISIS_DEFAULTS {
+  - +         protocols {
+  - +             isis {
+  - +                 level 1 disable;
+  - +                 level 2 {
+  - +                     wide-metrics-only;
+  - +                     prefix-export-limit 2000;
+  - +                 }
+  - +                 interface <*> {
+  - +                     hello-padding disable;
+  - +                     point-to-point;
+  - +                 }
+  - +                 reference-bandwidth 1000g;
+  - +             }
+  - +         }
+  - +     }
+  - +     IRB_OPTIONS {
+  - +         interfaces {
+  - +             irb {
+  - +                 unit <*> {
+  - +                     proxy-macip-advertisement;
+  - +                     virtual-gateway-accept-data;
+  - +                     family inet {
+  - +                         address <*> {
+  - +                             primary;
+  - +                             preferred;
+  - +                         }
+  - +                     }
+  - +                     virtual-gateway-v4-mac 00:5e:5e:5e:00:01;
+  - +                 }
+  - +             }
+  - +         }
+  - +     }
+  - + }
+  - '[edit system]'
+  - '-  host-name vqfx-re;'
+  - +  host-name spine1;
+  - '[edit system root-authentication]'
+  - '-   encrypted-password "$6$GBYzhLtc$Iok31/Uvm7G45dQ6tsO96sJhI5bgTEFTJrjRkWXLb2TASg4AtvojqJDrxSGzJwqVSyX.hpnNROxUGHyxF6/191"; ## SECRET-DATA'
+  - '+   encrypted-password "$6$eG4FXiQW$J4/a.5GZlXlrKcvJTpbaMl.qIelPqjR5lFk.POmxo5O3Vp5OdjHFFJ97PMqvABuZZOGXrdvSE6YF3f33wilgO."; ## SECRET-DATA'
+  - '[edit system login]'
+  - +    user ansible {
+  - +        uid 3000;
+  - +        class super-user;
+  - +        authentication {
+  - '+            encrypted-password "$6$FgsqZPh4$c.DcqHDQLA1gTP0Ok6fC6on30ABVfyJK3F3Y5XKIP8fGu0G0lIWcHiS.sdTNJnGvskywFmEBbZ9Xwo0poRWV90"; ## SECRET-DATA'
+  - '+            ssh-rsa "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDUCqloz2uqBHAHv0B8eIRVUDjuGJopQ+R1uVFsYPADeYEnJhlfVxF/jGaTZpK7gHZpaFDhKwm98ouZiwb6fVx0TCKFS4UJTM4qMjdrjzERCFLCyvml/x7YtTmgykHMedxdHJbXeX6FQ7TZ1DHoYPQ8oa1mjeFuj+rY1fa5WIz4Y2rmaukQ+N9OQt4GeaToKFhFtDMKB3zUXJ+TjUaFCIhewqwr8SSTzAdNh87epIUV01/NmRNZK19QXS+ahJfKaZiRExiesfw+qUeO7C/KY9QP5TfDuo6lRy9NfXbll4tOKQFD8BG+TsBzKpp5xjA6dM8wlAx3nORuDZ2P1mt4Y/uQVOckcWN0Kiin7q+o/iAp6yjsOaGtdTLHgBOZNBwD4EeAXO4lPjZR14jzQUKykMx9Y2cB47K4dMi5Co6j+sTBJ0FXCL4sJ7EDKMBYPQk7FcGSza8J9UsBne64C+iAzGN+mUlYRNqj3qIjtY/vRpSrnKbyzDABr7Xz+CgsvqYTowGU7RuW723JFpA2WlBM9XYz4rJFuHTERzQUH9V/Y+jze05BpW7x+52LuKrTMmMR6Ykje4bo4fryCsf4w/jgSdq08Yt3Qd7j73C0IxYXpE5Ib57sN+qoKVVuMhVhXrTtZDJwtIGopKK2z8YmIqvIDUOlcK+IYWwpf2xWEDMMOZnkzw== ansible awx tower ssh keys"; ## SECRET-DATA'
+  - +        }
+  - +    }
+  - '[edit system login user nornir]'
+  - '-    uid 2001;'
+  - +    uid 3001;
+  - '[edit system login user nornir authentication]'
+  - '-     encrypted-password "$6$hPSqLq6K$OLIdShmUUPmGjXtErBTRNVRRs9V5yRLkUgBKht4/.nFHnZ/LosaVu54b.wFmCPrEFkQymFzOKtXu45sDxaoz2."; ## SECRET-DATA'
+  - '+     encrypted-password "$6$DCyoMC6o$8NzXXdAIX4pD93DMgfO/2gyltgXhqFbngkYTGhksksLIbJuvGjXn8IcQQahRBXkkBUWJgbGb9mweZikl1bzAX1"; ## SECRET-DATA'
+  - '[edit system login]'
+  - +    user packetferret {
+  - +        uid 3002;
+  - +        class super-user;
+  - +        authentication {
+  - '+            encrypted-password "$6$s8L/YliX$0uji4ZNG4mUt59noVjvyd9NlcpKx88h5BN3sqeHoAGaDsfyJMqsNFGUs.LGhvyT1iP3faYNA1CTqxxTQ0MQRW1"; ## SECRET-DATA'
+  - '+            ssh-rsa "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCWRvTNMu/WTbpowURuKduMBaARWfNoyyXXJxbpt/h6QOd8wYx5Mt1YeoCvdUVFHgmFFxXJc6cmV3Oe8IHReF8NEgW1x2MA+Eg/M6GmKmWVUaJvlUO0raggwsWFk1YQkDIn+qaO46lDEuz0hhpR9INKQ30M6W/3DRojDfVNH9XjpFGB7KCnfA0GHvNGyEakwu7WvfqQWO2D0hPg85SCu9bsuifpLa1qm4FPIqqQqIN0AMlNOdaGnVIE5vqnTsmqi6T18R0qXLPs2vtXbpKR7s2awelVDZovwrQABDah87TCpudyrFWOR00sA/+q9uOVBR9gNnHCjX9lw5exhp71Yq8kmcgpzo9ejevShFUQrGVoist8wwXDI0BJyfqxFMLIKLc8wVHT309y6Lj0jxtfyd98Ngiv3wMCi80AcpukJDLVco6QNrqBk5KPin/2XFoIpSWmkTrOh5nFgHL4HrUAiOmvV3h60WaO6SxkcHp7x8fnt/YnfzXB90Hiy8b/dqi5wFEeRAgKnGo97LvFxbM8UfKOZKVB9cKSqXaloL9Fke56HwTIGFPFMXccOxjfsDdlpHJ7PiPbwq4X6z4VyY3Tyo8c5sxcaKHRX8IQtzId/pn2JvoUVGdiF6G9ZoYbgCGYeWsjczxE4Y/PJwoMm1W5dU47F58BKh/im+i52bmdC1sIvw== apple-pc-01.redtail.local"; ## SECRET-DATA'
+  - +        }
+  - +    }
+  - '-    user vagrant {'
+  - '-        uid 2000;'
+  - '-        class super-user;'
+  - '-        authentication {'
+  - '-            ssh-rsa "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA6NF8iallvQVp22WDkTkyrtvp9eWW6A8YVr+kz4TjGYe7gHzIw+niNltGEFHzD8+v1I2YJ6oXevct1YeS0o9HZyN1Q9qgCgzUFtdOKLv6IedplqoPkcmF0aYet2PkEDo3MlTBckFXPITAMzF8dJSIFo9D8HfdOV0IAdx4O7PtixWKn5y2hMNG0zQPyUecp4pzC6kivAIhyfHilFR61RGL+GPXQ2MWZWFYbAGjyiYJnAmCP3NOTd0jMZEnDkbUvxhMmBYSdETk1rRgm+R4LOzFUGaHqHDLKLX+FIPKcF96hrucXzcWyLbIbEgE98OHlnVYCzRdK8jlqm8tehUc9c9WhQ== vagrant insecure public key"; ## SECRET-DATA'
+  - '-        }'
+  - '-    }'
+  - '[edit system]'
+  - +  time-zone America/Chicago;
+  - +  name-server {
+  - +      10.255.127.250;
+  - +      10.255.127.251;
+  - +  }
+  - '[edit system syslog]'
+  - +    host 10.255.127.15 {
+  - +        any any;
+  - +        source-address 10.255.115.1;
+  - +    }
+  - '[edit system syslog]'
+  - '     file interactive-commands { ... }'
+  - +    file default-log-messages {
+  - +        any info;
+  - +        match "(requested 'commit' operation)|(requested 'commit synchronize' operation)|(copying configuration to juniper.save)|(commit complete)|ifAdminStatus|(FRU power)|(FRU removal)|(FRU insertion)|(link UP)|transitioned|Transferred|transfer-file|(license add)|(license delete)|(package -X update)|(package -X delete)|(FRU Online)|(FRU Offline)|(plugged in)|(unplugged)|GRES";
+  - +        structured-data;
+  - +    }
+  - '[edit system]'
+  - '-   extensions {'
+  - '-       providers {'
+  - '-           juniper {'
+  - '-               license-type juniper deployment-scope commercial;'
+  - '-           }'
+  - '-           chef {'
+  - '-               license-type juniper deployment-scope commercial;'
+  - '-           }'
+  - '-       }'
+  - '-   }'
+  - '[edit]'
+  - +  chassis {
+  - +      aggregated-devices {
+  - +          ethernet {
+  - +              device-count 64;
+  - +          }
+  - +      }
+  - +  }
+  - '[edit interfaces]'
+  - +  apply-groups IRB_OPTIONS;
+  - '[edit interfaces]'
+  - +   xe-0/0/1 {
+  - +       unit 0 {
+  - +           family inet {
+  - +               address 10.1.11.0/31;
+  - +           }
+  - +           family iso;
+  - +       }
+  - +   }
+  - +   xe-0/0/2 {
+  - +       unit 0 {
+  - +           family inet {
+  - +               address 10.1.12.0/31;
+  - +           }
+  - +           family iso;
+  - +       }
+  - +   }
+  - +   irb {
+  - +       unit 100 {
+  - +           family inet {
+  - +               address 10.100.100.2/24 {
+  - +                   virtual-gateway-address 10.100.100.1;
+  - +               }
+  - +           }
+  - +       }
+  - +   }
+  - +   lo0 {
+  - +       unit 0 {
+  - +           description loopback;
+  - +           family inet {
+  - +               address 192.168.200.1/32;
+  - +           }
+  - +           family iso {
+  - +               address 49.0192.0168.0200.0001.00;
+  - +           }
+  - +       }
+  - +       unit 1 {
+  - +           description "VRF_REDTAIL loopback interface";
+  - +           family inet {
+  - +               address 192.168.222.1/32;
+  - +           }
+  - +       }
+  - +   }
+  - '[edit]'
+  - +  snmp {
+  - +      interface em0.0;
+  - +      community "$home_snmp$" {
+  - +          authorization read-only;
+  - +          clients {
+  - +              10.255.127.0/24;
+  - +              0.0.0.0/0 restrict;
+  - +          }
+  - +      }
+  - +      trap-options {
+  - +          source-address 10.255.115.1;
+  - +      }
+  - +      trap-group SNMP_TRAP {
+  - +          version v2;
+  - +          categories {
+  - +              chassis;
+  - +              routing;
+  - +          }
+  - +          targets {
+  - +              10.255.127.31;
+  - +          }
+  - +      }
+  - +      trap-group space {
+  - +          version v2;
+  - +          targets {
+  - +              10.255.127.33;
+  - +          }
+  - +      }
+  - +  }
+  - '-  forwarding-options {'
+  - '-      storm-control-profiles default {'
+  - '-          all;'
+  - '-      }'
+  - '-  }'
+  - +  policy-options {
+  - +      prefix-list PREFIX_LOOPBACK_IPV4 {
+  - +          apply-path "interfaces lo0 unit <*> family inet address <*>";
+  - +      }
+  - +      prefix-list PREFIX_DEFAULT {
+  - +          0.0.0.0/0;
+  - +      }
+  - +      policy-statement EVPN_IMPORT {
+  - +          term EVPN_ROUTES {
+  - +              from community ESI;
+  - +              then accept;
+  - +          }
+  - +      }
+  - +      policy-statement EXPORT_VRF_REDTAIL {
+  - +          term 1 {
+  - +              from interface irb.100;
+  - +              then {
+  - +                  community add com100;
+  - +                  accept;
+  - +              }
+  - +          }
+  - +      }
+  - +      policy-statement IMPORT_INET {
+  - +          term 1 {
+  - +              from community com100;
+  - +              then accept;
+  - +          }
+  - +      }
+  - +      policy-statement POLICY_DEFAULT {
+  - +          from {
+  - +              prefix-list PREFIX_DEFAULT;
+  - +          }
+  - +          then accept;
+  - +      }
+  - +      policy-statement POLICY_EXPORT_ROUTER_IPV4 {
+  - +          from {
+  - +              prefix-list PREFIX_LOOPBACK_IPV4;
+  - +          }
+  - +          then accept;
+  - +      }
+  - +      policy-statement POLICY_LB {
+  - +          term 10 {
+  - +              then accept;
+  - +          }
+  - +      }
+  - +      community ESI members target:999:999;
+  - +      community com100 members target:1:100;
+  - +  }
+  - +  routing-instances {
+  - +      VRF_REDTAIL {
+  - +          routing-options {
+  - +              multipath;
+  - +              auto-export {
+  - +                  family inet {
+  - +                      unicast;
+  - +                  }
+  - +              }
+  - +          }
+  - +          instance-type vrf;
+  - +          interface irb.100;
+  - +          interface lo0.1;
+  - +          route-distinguisher 192.168.222.1:100;
+  - +          vrf-import IMPORT_INET;
+  - +          vrf-export EXPORT_VRF_REDTAIL;
+  - +          vrf-table-label;
+  - +      }
+  - +  }
+  - +  routing-options {
+  - +      forwarding-table {
+  - +          export POLICY_LB;
+  - +          ecmp-fast-reroute;
+  - +      }
+  - +      router-id 192.168.200.1;
+  - +      autonomous-system 100.0;
+  - +  }
+  - '[edit protocols]'
+  - +   isis {
+  - +       apply-groups GLOBAL_ISIS_DEFAULTS;
+  - +       interface xe-0/0/1.0 {
+  - +           point-to-point;
+  - +       }
+  - +       interface xe-0/0/2.0 {
+  - +           point-to-point;
+  - +       }
+  - +       interface lo0.0 {
+  - +           passive;
+  - +       }
+  - +       export POLICY_EXPORT_ROUTER_IPV4;
+  - +   }
+  - +   evpn {
+  - +       encapsulation vxlan;
+  - +       default-gateway no-gateway-community;
+  - +       extended-vni-list all;
+  - +   }
+  - +   bgp {
+  - +       group LEAF_EVPN_OVERLAY {
+  - +           type internal;
+  - +           local-address 192.168.200.1;
+  - +           family evpn {
+  - +               signaling;
+  - +           }
+  - +           cluster 0.0.0.1;
+  - +           multipath;
+  - +           neighbor 192.168.200.11 {
+  - +               description leaf1;
+  - +           }
+  - +           neighbor 192.168.200.12 {
+  - +               description leaf2;
+  - +           }
+  - +           neighbor 192.168.200.13 {
+  - +               description leaf3;
+  - +           }
+  - +           neighbor 192.168.200.14 {
+  - +               description leaf4;
+  - +           }
+  - +       }
+  - +       group SPINES_ROUTE_REFLECTORS {
+  - +           type internal;
+  - +           local-address 192.168.200.1;
+  - +           family evpn {
+  - +               signaling;
+  - +           }
+  - +           neighbor 192.168.200.2;
+  - +       }
+  - +   }
+  - +   lldp {
+  - +       port-id-subtype interface-name;
+  - +       port-description-type interface-alias;
+  - +       interface all;
+  - +       interface em0 {
+  - +           disable;
+  - +       }
+  - +   }
+  - '-   igmp-snooping {'
+  - '-       vlan default;'
+  - '-   }'
+  - '[edit]'
+  - +  switch-options {
+  - +      vtep-source-interface lo0.0;
+  - +      route-distinguisher 192.168.200.1:999;
+  - +      vrf-import EVPN_IMPORT;
+  - +      vrf-target {
+  - +          target:999:999;
+  - +          auto {
+  - +              import-as 100.0 {
+  - +                  vni-list all;
+  - +              }
+  - +          }
+  - +      }
+  - +  }
+  - '[edit vlans]'
+  - '-   default {'
+  - '-       vlan-id 1;'
+  - '-   }'
+  - +   redtail_dc {
+  - +       description "vlan 100 for redtail consulting";
+  - +       vlan-id 100;
+  - +       l3-interface irb.100;
+  - +       vxlan {
+  - +           vni 5100;
+  - +       }
+  - +   }
+ok: [leaf1] => 
+  result.diff_lines:
+  - ''
+  - '[edit]'
+  - + groups {
+  - +     GLOBAL_ISIS_DEFAULTS {
+  - +         protocols {
+  - +             isis {
+  - +                 level 1 disable;
+  - +                 level 2 {
+  - +                     wide-metrics-only;
+  - +                     prefix-export-limit 2000;
+  - +                 }
+  - +                 interface <*> {
+  - +                     hello-padding disable;
+  - +                     point-to-point;
+  - +                 }
+  - +                 reference-bandwidth 1000g;
+  - +             }
+  - +         }
+  - +     }
+  - + }
+  - '[edit system]'
+  - '-  host-name vqfx-re;'
+  - +  host-name leaf1;
+  - '[edit system root-authentication]'
+  - '-   encrypted-password "$6$xfdPsbcl$rh7YnSMTPDRnMTnWG43SCiWewUqQnUMCnuNKoPdxf0z34kDToo5V1onq4RxWww/SQlY1C1GlAv8p9G3qU08eM."; ## SECRET-DATA'
+  - '+   encrypted-password "$6$eG4FXiQW$J4/a.5GZlXlrKcvJTpbaMl.qIelPqjR5lFk.POmxo5O3Vp5OdjHFFJ97PMqvABuZZOGXrdvSE6YF3f33wilgO."; ## SECRET-DATA'
+  - '[edit system login]'
+  - +    user ansible {
+  - +        uid 3000;
+  - +        class super-user;
+  - +        authentication {
+  - '+            encrypted-password "$6$FgsqZPh4$c.DcqHDQLA1gTP0Ok6fC6on30ABVfyJK3F3Y5XKIP8fGu0G0lIWcHiS.sdTNJnGvskywFmEBbZ9Xwo0poRWV90"; ## SECRET-DATA'
+  - '+            ssh-rsa "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDUCqloz2uqBHAHv0B8eIRVUDjuGJopQ+R1uVFsYPADeYEnJhlfVxF/jGaTZpK7gHZpaFDhKwm98ouZiwb6fVx0TCKFS4UJTM4qMjdrjzERCFLCyvml/x7YtTmgykHMedxdHJbXeX6FQ7TZ1DHoYPQ8oa1mjeFuj+rY1fa5WIz4Y2rmaukQ+N9OQt4GeaToKFhFtDMKB3zUXJ+TjUaFCIhewqwr8SSTzAdNh87epIUV01/NmRNZK19QXS+ahJfKaZiRExiesfw+qUeO7C/KY9QP5TfDuo6lRy9NfXbll4tOKQFD8BG+TsBzKpp5xjA6dM8wlAx3nORuDZ2P1mt4Y/uQVOckcWN0Kiin7q+o/iAp6yjsOaGtdTLHgBOZNBwD4EeAXO4lPjZR14jzQUKykMx9Y2cB47K4dMi5Co6j+sTBJ0FXCL4sJ7EDKMBYPQk7FcGSza8J9UsBne64C+iAzGN+mUlYRNqj3qIjtY/vRpSrnKbyzDABr7Xz+CgsvqYTowGU7RuW723JFpA2WlBM9XYz4rJFuHTERzQUH9V/Y+jze05BpW7x+52LuKrTMmMR6Ykje4bo4fryCsf4w/jgSdq08Yt3Qd7j73C0IxYXpE5Ib57sN+qoKVVuMhVhXrTtZDJwtIGopKK2z8YmIqvIDUOlcK+IYWwpf2xWEDMMOZnkzw== ansible awx tower ssh keys"; ## SECRET-DATA'
+  - +        }
+  - +    }
+  - '[edit system login user nornir]'
+  - '-    uid 2001;'
+  - +    uid 3001;
+  - '[edit system login user nornir authentication]'
+  - '-     encrypted-password "$6$RVLXgWd2$Yg/UsaIp9IFtedCatNYTsvEqRD0XPtaP9UeDq3orwzuqD.IBlM9OVfFA/qUHPRCwCLu50G7gfQqMepr4V7CLQ1"; ## SECRET-DATA'
+  - '+     encrypted-password "$6$DCyoMC6o$8NzXXdAIX4pD93DMgfO/2gyltgXhqFbngkYTGhksksLIbJuvGjXn8IcQQahRBXkkBUWJgbGb9mweZikl1bzAX1"; ## SECRET-DATA'
+  - '[edit system login]'
+  - +    user packetferret {
+  - +        uid 3002;
+  - +        class super-user;
+  - +        authentication {
+  - '+            encrypted-password "$6$s8L/YliX$0uji4ZNG4mUt59noVjvyd9NlcpKx88h5BN3sqeHoAGaDsfyJMqsNFGUs.LGhvyT1iP3faYNA1CTqxxTQ0MQRW1"; ## SECRET-DATA'
+  - '+            ssh-rsa "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCWRvTNMu/WTbpowURuKduMBaARWfNoyyXXJxbpt/h6QOd8wYx5Mt1YeoCvdUVFHgmFFxXJc6cmV3Oe8IHReF8NEgW1x2MA+Eg/M6GmKmWVUaJvlUO0raggwsWFk1YQkDIn+qaO46lDEuz0hhpR9INKQ30M6W/3DRojDfVNH9XjpFGB7KCnfA0GHvNGyEakwu7WvfqQWO2D0hPg85SCu9bsuifpLa1qm4FPIqqQqIN0AMlNOdaGnVIE5vqnTsmqi6T18R0qXLPs2vtXbpKR7s2awelVDZovwrQABDah87TCpudyrFWOR00sA/+q9uOVBR9gNnHCjX9lw5exhp71Yq8kmcgpzo9ejevShFUQrGVoist8wwXDI0BJyfqxFMLIKLc8wVHT309y6Lj0jxtfyd98Ngiv3wMCi80AcpukJDLVco6QNrqBk5KPin/2XFoIpSWmkTrOh5nFgHL4HrUAiOmvV3h60WaO6SxkcHp7x8fnt/YnfzXB90Hiy8b/dqi5wFEeRAgKnGo97LvFxbM8UfKOZKVB9cKSqXaloL9Fke56HwTIGFPFMXccOxjfsDdlpHJ7PiPbwq4X6z4VyY3Tyo8c5sxcaKHRX8IQtzId/pn2JvoUVGdiF6G9ZoYbgCGYeWsjczxE4Y/PJwoMm1W5dU47F58BKh/im+i52bmdC1sIvw== apple-pc-01.redtail.local"; ## SECRET-DATA'
+  - +        }
+  - +    }
+  - '-    user vagrant {'
+  - '-        uid 2000;'
+  - '-        class super-user;'
+  - '-        authentication {'
+  - '-            ssh-rsa "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA6NF8iallvQVp22WDkTkyrtvp9eWW6A8YVr+kz4TjGYe7gHzIw+niNltGEFHzD8+v1I2YJ6oXevct1YeS0o9HZyN1Q9qgCgzUFtdOKLv6IedplqoPkcmF0aYet2PkEDo3MlTBckFXPITAMzF8dJSIFo9D8HfdOV0IAdx4O7PtixWKn5y2hMNG0zQPyUecp4pzC6kivAIhyfHilFR61RGL+GPXQ2MWZWFYbAGjyiYJnAmCP3NOTd0jMZEnDkbUvxhMmBYSdETk1rRgm+R4LOzFUGaHqHDLKLX+FIPKcF96hrucXzcWyLbIbEgE98OHlnVYCzRdK8jlqm8tehUc9c9WhQ== vagrant insecure public key"; ## SECRET-DATA'
+  - '-        }'
+  - '-    }'
+  - '[edit system]'
+  - +  time-zone America/Chicago;
+  - +  name-server {
+  - +      10.255.127.250;
+  - +      10.255.127.251;
+  - +  }
+  - '[edit system syslog]'
+  - +    host 10.255.127.15 {
+  - +        any any;
+  - +        source-address 10.255.115.11;
+  - +    }
+  - '[edit system syslog]'
+  - '     file interactive-commands { ... }'
+  - +    file default-log-messages {
+  - +        any info;
+  - +        match "(requested 'commit' operation)|(requested 'commit synchronize' operation)|(copying configuration to juniper.save)|(commit complete)|ifAdminStatus|(FRU power)|(FRU removal)|(FRU insertion)|(link UP)|transitioned|Transferred|transfer-file|(license add)|(license delete)|(package -X update)|(package -X delete)|(FRU Online)|(FRU Offline)|(plugged in)|(unplugged)|GRES";
+  - +        structured-data;
+  - +    }
+  - '[edit system]'
+  - '-   extensions {'
+  - '-       providers {'
+  - '-           juniper {'
+  - '-               license-type juniper deployment-scope commercial;'
+  - '-           }'
+  - '-           chef {'
+  - '-               license-type juniper deployment-scope commercial;'
+  - '-           }'
+  - '-       }'
+  - '-   }'
+  - '[edit]'
+  - +  chassis {
+  - +      aggregated-devices {
+  - +          ethernet {
+  - +              device-count 64;
+  - +          }
+  - +      }
+  - +  }
+  - '[edit interfaces]'
+  - +   xe-0/0/0 {
+  - +       description "server (member of ae0)";
+  - +       ether-options {
+  - +           802.3ad ae0;
+  - +       }
+  - +   }
+  - +   xe-0/0/1 {
+  - +       unit 0 {
+  - +           family inet {
+  - +               address 10.1.11.1/31;
+  - +           }
+  - +           family iso;
+  - +       }
+  - +   }
+  - +   ae0 {
+  - '+       description "server (members: xe-0/0/0)";'
+  - +       esi {
+  - +           00:ae:02:11:00:00:01:00:00:00;
+  - +           all-active;
+  - +       }
+  - +       aggregated-ether-options {
+  - +           lacp {
+  - +               active;
+  - +               system-id ae:02:11:00:00:01;
+  - +               force-up;
+  - +           }
+  - +       }
+  - +       unit 0 {
+  - +           family ethernet-switching {
+  - +               interface-mode access;
+  - +               vlan {
+  - +                   members redtail_dc;
+  - +               }
+  - +           }
+  - +       }
+  - +   }
+  - +   lo0 {
+  - +       unit 0 {
+  - +           description loopback;
+  - +           family inet {
+  - +               address 192.168.200.11/32;
+  - +           }
+  - +           family iso {
+  - +               address 49.0192.0168.0200.0011.00;
+  - +           }
+  - +       }
+  - +   }
+  - '[edit]'
+  - +  snmp {
+  - +      interface em0.0;
+  - +      community "$home_snmp$" {
+  - +          authorization read-only;
+  - +          clients {
+  - +              10.255.127.0/24;
+  - +              0.0.0.0/0 restrict;
+  - +          }
+  - +      }
+  - +      trap-options {
+  - +          source-address 10.255.115.11;
+  - +      }
+  - +      trap-group SNMP_TRAP {
+  - +          version v2;
+  - +          categories {
+  - +              chassis;
+  - +              routing;
+  - +          }
+  - +          targets {
+  - +              10.255.127.31;
+  - +          }
+  - +      }
+  - +      trap-group space {
+  - +          version v2;
+  - +          targets {
+  - +              10.255.127.33;
+  - +          }
+  - +      }
+  - +  }
+  - +  policy-options {
+  - +      prefix-list PREFIX_LOOPBACK_IPV4 {
+  - +          apply-path "interfaces lo0 unit <*> family inet address <*>";
+  - +      }
+  - +      prefix-list PREFIX_DEFAULT {
+  - +          0.0.0.0/0;
+  - +      }
+  - +      policy-statement EVPN_IMPORT {
+  - +          term EVPN_ROUTES {
+  - +              from community ESI;
+  - +              then accept;
+  - +          }
+  - +      }
+  - +      policy-statement POLICY_DEFAULT {
+  - +          from {
+  - +              prefix-list PREFIX_DEFAULT;
+  - +          }
+  - +          then accept;
+  - +      }
+  - +      policy-statement POLICY_EXPORT_ROUTER_IPV4 {
+  - +          from {
+  - +              prefix-list PREFIX_LOOPBACK_IPV4;
+  - +          }
+  - +          then accept;
+  - +      }
+  - +      policy-statement POLICY_LB {
+  - +          term 10 {
+  - +              then accept;
+  - +          }
+  - +      }
+  - +      community ESI members target:999:999;
+  - +  }
+  - +  routing-options {
+  - +      forwarding-table {
+  - +          export POLICY_LB;
+  - +          ecmp-fast-reroute;
+  - +      }
+  - +      router-id 192.168.200.11;
+  - +      autonomous-system 100.0;
+  - +  }
+  - '[edit protocols]'
+  - +   isis {
+  - +       apply-groups GLOBAL_ISIS_DEFAULTS;
+  - +       interface xe-0/0/1.0;
+  - +       interface lo0.0 {
+  - +           passive;
+  - +       }
+  - +       export POLICY_EXPORT_ROUTER_IPV4;
+  - +   }
+  - +   evpn {
+  - +       encapsulation vxlan;
+  - +       extended-vni-list all;
+  - +   }
+  - +   bgp {
+  - +       group LEAF_EVPN_OVERLAY {
+  - +           type internal;
+  - +           local-address 192.168.200.11;
+  - +           family evpn {
+  - +               signaling;
+  - +           }
+  - +           multipath;
+  - +           neighbor 192.168.200.1 {
+  - +               description spine1;
+  - +           }
+  - +           neighbor 192.168.200.2 {
+  - +               description spine2;
+  - +           }
+  - +       }
+  - +   }
+  - +   lldp {
+  - +       port-id-subtype interface-name;
+  - +       port-description-type interface-alias;
+  - +       interface all;
+  - +       interface em0 {
+  - +           disable;
+  - +       }
+  - +   }
+  - '-   igmp-snooping {'
+  - '-       vlan default;'
+  - '-   }'
+  - '[edit]'
+  - +  switch-options {
+  - +      vtep-source-interface lo0.0;
+  - +      route-distinguisher 192.168.200.11:999;
+  - +      vrf-import EVPN_IMPORT;
+  - +      vrf-target {
+  - +          target:999:999;
+  - +          auto {
+  - +              import-as 100.0 {
+  - +                  vni-list all;
+  - +              }
+  - +          }
+  - +      }
+  - +  }
+  - '[edit vlans]'
+  - '-   default {'
+  - '-       vlan-id 1;'
+  - '-   }'
+  - +   redtail_dc {
+  - +       description "vlan 100 for redtail consulting";
+  - +       vlan-id 100;
+  - +       vxlan {
+  - +           vni 5100;
+  - +       }
+  - +   }
+ok: [leaf2] => 
+  result.diff_lines:
+  - ''
+  - '[edit]'
+  - + groups {
+  - +     GLOBAL_ISIS_DEFAULTS {
+  - +         protocols {
+  - +             isis {
+  - +                 level 1 disable;
+  - +                 level 2 {
+  - +                     wide-metrics-only;
+  - +                     prefix-export-limit 2000;
+  - +                 }
+  - +                 interface <*> {
+  - +                     hello-padding disable;
+  - +                     point-to-point;
+  - +                 }
+  - +                 reference-bandwidth 1000g;
+  - +             }
+  - +         }
+  - +     }
+  - + }
+  - '[edit system]'
+  - '-  host-name vqfx-re;'
+  - +  host-name leaf2;
+  - '[edit system root-authentication]'
+  - '-   encrypted-password "$6$5gQxB0uB$ZnUb.Vk.3pnFTibI3/3Nm2URxr6Icyl.JIqD63yiYfbDWbs52rwaoR13SW1rxOSMtmxNfQnVBrhSBcCzch1gT/"; ## SECRET-DATA'
+  - '+   encrypted-password "$6$eG4FXiQW$J4/a.5GZlXlrKcvJTpbaMl.qIelPqjR5lFk.POmxo5O3Vp5OdjHFFJ97PMqvABuZZOGXrdvSE6YF3f33wilgO."; ## SECRET-DATA'
+  - '[edit system login]'
+  - +    user ansible {
+  - +        uid 3000;
+  - +        class super-user;
+  - +        authentication {
+  - '+            encrypted-password "$6$FgsqZPh4$c.DcqHDQLA1gTP0Ok6fC6on30ABVfyJK3F3Y5XKIP8fGu0G0lIWcHiS.sdTNJnGvskywFmEBbZ9Xwo0poRWV90"; ## SECRET-DATA'
+  - '+            ssh-rsa "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDUCqloz2uqBHAHv0B8eIRVUDjuGJopQ+R1uVFsYPADeYEnJhlfVxF/jGaTZpK7gHZpaFDhKwm98ouZiwb6fVx0TCKFS4UJTM4qMjdrjzERCFLCyvml/x7YtTmgykHMedxdHJbXeX6FQ7TZ1DHoYPQ8oa1mjeFuj+rY1fa5WIz4Y2rmaukQ+N9OQt4GeaToKFhFtDMKB3zUXJ+TjUaFCIhewqwr8SSTzAdNh87epIUV01/NmRNZK19QXS+ahJfKaZiRExiesfw+qUeO7C/KY9QP5TfDuo6lRy9NfXbll4tOKQFD8BG+TsBzKpp5xjA6dM8wlAx3nORuDZ2P1mt4Y/uQVOckcWN0Kiin7q+o/iAp6yjsOaGtdTLHgBOZNBwD4EeAXO4lPjZR14jzQUKykMx9Y2cB47K4dMi5Co6j+sTBJ0FXCL4sJ7EDKMBYPQk7FcGSza8J9UsBne64C+iAzGN+mUlYRNqj3qIjtY/vRpSrnKbyzDABr7Xz+CgsvqYTowGU7RuW723JFpA2WlBM9XYz4rJFuHTERzQUH9V/Y+jze05BpW7x+52LuKrTMmMR6Ykje4bo4fryCsf4w/jgSdq08Yt3Qd7j73C0IxYXpE5Ib57sN+qoKVVuMhVhXrTtZDJwtIGopKK2z8YmIqvIDUOlcK+IYWwpf2xWEDMMOZnkzw== ansible awx tower ssh keys"; ## SECRET-DATA'
+  - +        }
+  - +    }
+  - '[edit system login user nornir]'
+  - '-    uid 2001;'
+  - +    uid 3001;
+  - '[edit system login user nornir authentication]'
+  - '-     encrypted-password "$6$qhLEdVOQ$FLcArJM0f0a6ZB15LLCaQrPUOSVAhvxDqqEr2auY8H7jsi5yILKxltWLFq40HMpDdB8cd1syWSCCHeG5s2u.8."; ## SECRET-DATA'
+  - '+     encrypted-password "$6$DCyoMC6o$8NzXXdAIX4pD93DMgfO/2gyltgXhqFbngkYTGhksksLIbJuvGjXn8IcQQahRBXkkBUWJgbGb9mweZikl1bzAX1"; ## SECRET-DATA'
+  - '[edit system login]'
+  - +    user packetferret {
+  - +        uid 3002;
+  - +        class super-user;
+  - +        authentication {
+  - '+            encrypted-password "$6$s8L/YliX$0uji4ZNG4mUt59noVjvyd9NlcpKx88h5BN3sqeHoAGaDsfyJMqsNFGUs.LGhvyT1iP3faYNA1CTqxxTQ0MQRW1"; ## SECRET-DATA'
+  - '+            ssh-rsa "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCWRvTNMu/WTbpowURuKduMBaARWfNoyyXXJxbpt/h6QOd8wYx5Mt1YeoCvdUVFHgmFFxXJc6cmV3Oe8IHReF8NEgW1x2MA+Eg/M6GmKmWVUaJvlUO0raggwsWFk1YQkDIn+qaO46lDEuz0hhpR9INKQ30M6W/3DRojDfVNH9XjpFGB7KCnfA0GHvNGyEakwu7WvfqQWO2D0hPg85SCu9bsuifpLa1qm4FPIqqQqIN0AMlNOdaGnVIE5vqnTsmqi6T18R0qXLPs2vtXbpKR7s2awelVDZovwrQABDah87TCpudyrFWOR00sA/+q9uOVBR9gNnHCjX9lw5exhp71Yq8kmcgpzo9ejevShFUQrGVoist8wwXDI0BJyfqxFMLIKLc8wVHT309y6Lj0jxtfyd98Ngiv3wMCi80AcpukJDLVco6QNrqBk5KPin/2XFoIpSWmkTrOh5nFgHL4HrUAiOmvV3h60WaO6SxkcHp7x8fnt/YnfzXB90Hiy8b/dqi5wFEeRAgKnGo97LvFxbM8UfKOZKVB9cKSqXaloL9Fke56HwTIGFPFMXccOxjfsDdlpHJ7PiPbwq4X6z4VyY3Tyo8c5sxcaKHRX8IQtzId/pn2JvoUVGdiF6G9ZoYbgCGYeWsjczxE4Y/PJwoMm1W5dU47F58BKh/im+i52bmdC1sIvw== apple-pc-01.redtail.local"; ## SECRET-DATA'
+  - +        }
+  - +    }
+  - '-    user vagrant {'
+  - '-        uid 2000;'
+  - '-        class super-user;'
+  - '-        authentication {'
+  - '-            ssh-rsa "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA6NF8iallvQVp22WDkTkyrtvp9eWW6A8YVr+kz4TjGYe7gHzIw+niNltGEFHzD8+v1I2YJ6oXevct1YeS0o9HZyN1Q9qgCgzUFtdOKLv6IedplqoPkcmF0aYet2PkEDo3MlTBckFXPITAMzF8dJSIFo9D8HfdOV0IAdx4O7PtixWKn5y2hMNG0zQPyUecp4pzC6kivAIhyfHilFR61RGL+GPXQ2MWZWFYbAGjyiYJnAmCP3NOTd0jMZEnDkbUvxhMmBYSdETk1rRgm+R4LOzFUGaHqHDLKLX+FIPKcF96hrucXzcWyLbIbEgE98OHlnVYCzRdK8jlqm8tehUc9c9WhQ== vagrant insecure public key"; ## SECRET-DATA'
+  - '-        }'
+  - '-    }'
+  - '[edit system]'
+  - +  time-zone America/Chicago;
+  - +  name-server {
+  - +      10.255.127.250;
+  - +      10.255.127.251;
+  - +  }
+  - '[edit system syslog]'
+  - +    host 10.255.127.15 {
+  - +        any any;
+  - +        source-address 10.255.115.12;
+  - +    }
+  - '[edit system syslog]'
+  - '     file interactive-commands { ... }'
+  - +    file default-log-messages {
+  - +        any info;
+  - +        match "(requested 'commit' operation)|(requested 'commit synchronize' operation)|(copying configuration to juniper.save)|(commit complete)|ifAdminStatus|(FRU power)|(FRU removal)|(FRU insertion)|(link UP)|transitioned|Transferred|transfer-file|(license add)|(license delete)|(package -X update)|(package -X delete)|(FRU Online)|(FRU Offline)|(plugged in)|(unplugged)|GRES";
+  - +        structured-data;
+  - +    }
+  - '[edit system]'
+  - '-   extensions {'
+  - '-       providers {'
+  - '-           juniper {'
+  - '-               license-type juniper deployment-scope commercial;'
+  - '-           }'
+  - '-           chef {'
+  - '-               license-type juniper deployment-scope commercial;'
+  - '-           }'
+  - '-       }'
+  - '-   }'
+  - '[edit]'
+  - +  chassis {
+  - +      aggregated-devices {
+  - +          ethernet {
+  - +              device-count 64;
+  - +          }
+  - +      }
+  - +  }
+  - '[edit interfaces]'
+  - +   xe-0/0/0 {
+  - +       description "server (member of ae0)";
+  - +       ether-options {
+  - +           802.3ad ae0;
+  - +       }
+  - +   }
+  - +   xe-0/0/2 {
+  - +       unit 0 {
+  - +           family inet {
+  - +               address 10.1.12.1/31;
+  - +           }
+  - +           family iso;
+  - +       }
+  - +   }
+  - +   ae0 {
+  - '+       description "server (members: xe-0/0/0)";'
+  - +       esi {
+  - +           00:ae:02:11:00:00:01:00:00:00;
+  - +           all-active;
+  - +       }
+  - +       aggregated-ether-options {
+  - +           lacp {
+  - +               active;
+  - +               system-id ae:02:11:00:00:01;
+  - +           }
+  - +       }
+  - +       unit 0 {
+  - +           family ethernet-switching {
+  - +               interface-mode access;
+  - +               vlan {
+  - +                   members redtail_dc;
+  - +               }
+  - +           }
+  - +       }
+  - +   }
+  - +   lo0 {
+  - +       unit 0 {
+  - +           description loopback;
+  - +           family inet {
+  - +               address 192.168.200.12/32;
+  - +           }
+  - +           family iso {
+  - +               address 49.0192.0168.0200.0012.00;
+  - +           }
+  - +       }
+  - +   }
+  - '[edit]'
+  - +  snmp {
+  - +      interface em0.0;
+  - +      community "$home_snmp$" {
+  - +          authorization read-only;
+  - +          clients {
+  - +              10.255.127.0/24;
+  - +              0.0.0.0/0 restrict;
+  - +          }
+  - +      }
+  - +      trap-options {
+  - +          source-address 10.255.115.12;
+  - +      }
+  - +      trap-group SNMP_TRAP {
+  - +          version v2;
+  - +          categories {
+  - +              chassis;
+  - +              routing;
+  - +          }
+  - +          targets {
+  - +              10.255.127.31;
+  - +          }
+  - +      }
+  - +      trap-group space {
+  - +          version v2;
+  - +          targets {
+  - +              10.255.127.33;
+  - +          }
+  - +      }
+  - +  }
+  - +  policy-options {
+  - +      prefix-list PREFIX_LOOPBACK_IPV4 {
+  - +          apply-path "interfaces lo0 unit <*> family inet address <*>";
+  - +      }
+  - +      prefix-list PREFIX_DEFAULT {
+  - +          0.0.0.0/0;
+  - +      }
+  - +      policy-statement EVPN_IMPORT {
+  - +          term EVPN_ROUTES {
+  - +              from community ESI;
+  - +              then accept;
+  - +          }
+  - +      }
+  - +      policy-statement POLICY_DEFAULT {
+  - +          from {
+  - +              prefix-list PREFIX_DEFAULT;
+  - +          }
+  - +          then accept;
+  - +      }
+  - +      policy-statement POLICY_EXPORT_ROUTER_IPV4 {
+  - +          from {
+  - +              prefix-list PREFIX_LOOPBACK_IPV4;
+  - +          }
+  - +          then accept;
+  - +      }
+  - +      policy-statement POLICY_LB {
+  - +          term 10 {
+  - +              then accept;
+  - +          }
+  - +      }
+  - +      community ESI members target:999:999;
+  - +  }
+  - +  routing-options {
+  - +      forwarding-table {
+  - +          export POLICY_LB;
+  - +          ecmp-fast-reroute;
+  - +      }
+  - +      router-id 192.168.200.12;
+  - +      autonomous-system 100.0;
+  - +  }
+  - '[edit protocols]'
+  - +   isis {
+  - +       apply-groups GLOBAL_ISIS_DEFAULTS;
+  - +       interface xe-0/0/2.0;
+  - +       interface lo0.0 {
+  - +           passive;
+  - +       }
+  - +       export POLICY_EXPORT_ROUTER_IPV4;
+  - +   }
+  - +   evpn {
+  - +       encapsulation vxlan;
+  - +       extended-vni-list all;
+  - +   }
+  - +   bgp {
+  - +       group LEAF_EVPN_OVERLAY {
+  - +           type internal;
+  - +           local-address 192.168.200.12;
+  - +           family evpn {
+  - +               signaling;
+  - +           }
+  - +           multipath;
+  - +           neighbor 192.168.200.1 {
+  - +               description spine1;
+  - +           }
+  - +           neighbor 192.168.200.2 {
+  - +               description spine2;
+  - +           }
+  - +       }
+  - +   }
+  - +   lldp {
+  - +       port-id-subtype interface-name;
+  - +       port-description-type interface-alias;
+  - +       interface all;
+  - +       interface em0 {
+  - +           disable;
+  - +       }
+  - +   }
+  - '-   igmp-snooping {'
+  - '-       vlan default;'
+  - '-   }'
+  - '[edit]'
+  - +  switch-options {
+  - +      vtep-source-interface lo0.0;
+  - +      route-distinguisher 192.168.200.12:999;
+  - +      vrf-import EVPN_IMPORT;
+  - +      vrf-target {
+  - +          target:999:999;
+  - +          auto {
+  - +              import-as 100.0 {
+  - +                  vni-list all;
+  - +              }
+  - +          }
+  - +      }
+  - +  }
+  - '[edit vlans]'
+  - '-   default {'
+  - '-       vlan-id 1;'
+  - '-   }'
+  - +   redtail_dc {
+  - +       description "vlan 100 for redtail consulting";
+  - +       vlan-id 100;
+  - +       vxlan {
+  - +           vni 5100;
+  - +       }
+  - +   }
+
+PLAY RECAP ******************************************************************************************************************************
+leaf1                      : ok=28   changed=26   unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+leaf2                      : ok=28   changed=25   unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+spine1                     : ok=31   changed=26   unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+
+Wednesday 01 April 2020  11:04:56 +0000 (0:00:00.120)       0:00:42.848 ******* 
+=============================================================================== 
+juniper_configuration_apply : ### APPLY CANDIDATE CONFIGURATION ON REMOTE DEVICE ### -------------------------------------------- 30.47s
+juniper_stanza_version : building version configuration -------------------------------------------------------------------------- 0.79s
+juniper_stanza_protocols : building protocols configuration ---------------------------------------------------------------------- 0.60s
+juniper_stanza_system : building system configuration ---------------------------------------------------------------------------- 0.59s
+juniper_stanza_firewall : building firewall configuration ------------------------------------------------------------------------ 0.56s
+juniper_stanza_policy_options : building policy_options configuration ------------------------------------------------------------ 0.54s
+juniper_stanza_routing_instances : building routing_instances configuration ------------------------------------------------------ 0.53s
+juniper_stanza_groups : building groups configuration ---------------------------------------------------------------------------- 0.50s
+juniper_stanza_switch_options : building switch_options configuration ------------------------------------------------------------ 0.49s
+juniper_stanza_interfaces : building interfaces configuration -------------------------------------------------------------------- 0.48s
+juniper_stanza_routing_options : building routing_options configuration ---------------------------------------------------------- 0.48s
+juniper_stanza_class_of_service : building class_of_service configuration -------------------------------------------------------- 0.47s
+juniper_stanza_chassis : building chassis configuration -------------------------------------------------------------------------- 0.46s
+juniper_stanza_snmp : building snmp configuration -------------------------------------------------------------------------------- 0.45s
+juniper_stanza_vlans : building vlans configuration ------------------------------------------------------------------------------ 0.44s
+juniper_stanza_access : building access configuration ---------------------------------------------------------------------------- 0.44s
+juniper_stanza_poe : building poe configuration ---------------------------------------------------------------------------------- 0.44s
+juniper_stanza_forwarding_options : building forwarding_options configuration ---------------------------------------------------- 0.44s
+juniper_stanza_apply_groups : building apply_groups configuration ---------------------------------------------------------------- 0.42s
+juniper_assemble_config : Remove blank lines between matches --------------------------------------------------------------------- 0.41s
+
+ 🐍 app-root  ⚡  ds9  ansible   master ✘ ✖ ✹  45s 
+#  pip install junos-eznc==2.3.2
+Collecting junos-eznc==2.3.2
+  Downloading junos_eznc-2.3.2-py2.py3-none-any.whl (193 kB)
+     |████████████████████████████████| 193 kB 2.1 MB/s 
+Requirement already satisfied: paramiko>=1.15.2 in /opt/app-root/lib/python3.6/site-packages (from junos-eznc==2.3.2) (2.7.1)
+Requirement already satisfied: pyserial in /opt/app-root/lib/python3.6/site-packages (from junos-eznc==2.3.2) (3.4)
+Requirement already satisfied: lxml>=3.2.4 in /opt/app-root/lib/python3.6/site-packages (from junos-eznc==2.3.2) (4.5.0)
+Requirement already satisfied: transitions in /opt/app-root/lib/python3.6/site-packages (from junos-eznc==2.3.2) (0.8.0)
+Requirement already satisfied: scp>=0.7.0 in /opt/app-root/lib/python3.6/site-packages (from junos-eznc==2.3.2) (0.13.2)
+Requirement already satisfied: ncclient>=0.6.3 in /opt/app-root/lib/python3.6/site-packages (from junos-eznc==2.3.2) (0.6.7)
+  Ignoring selectors2: markers 'python_version <= "3.4"' don't match your environment
+Collecting ntc-templates
+  Downloading ntc_templates-1.4.0.tar.gz (636 kB)
+     |████████████████████████████████| 636 kB 39.0 MB/s 
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+    Preparing wheel metadata ... done
+Requirement already satisfied: PyYAML>=5.1 in /opt/app-root/lib/python3.6/site-packages (from junos-eznc==2.3.2) (5.3.1)
+Requirement already satisfied: pyparsing in /opt/app-root/lib/python3.6/site-packages (from junos-eznc==2.3.2) (2.4.6)
+Requirement already satisfied: jinja2>=2.7.1 in /opt/app-root/lib/python3.6/site-packages (from junos-eznc==2.3.2) (2.11.1)
+Requirement already satisfied: netaddr in /opt/app-root/lib/python3.6/site-packages (from junos-eznc==2.3.2) (0.7.19)
+Requirement already satisfied: yamlordereddictloader in /opt/app-root/lib/python3.6/site-packages (from junos-eznc==2.3.2) (0.4.0)
+Requirement already satisfied: six in /opt/app-root/lib/python3.6/site-packages (from junos-eznc==2.3.2) (1.14.0)
+Requirement already satisfied: cryptography>=2.5 in /opt/app-root/lib/python3.6/site-packages (from paramiko>=1.15.2->junos-eznc==2.3.2) (2.8)
+Requirement already satisfied: pynacl>=1.0.1 in /opt/app-root/lib/python3.6/site-packages (from paramiko>=1.15.2->junos-eznc==2.3.2) (1.3.0)
+Requirement already satisfied: bcrypt>=3.1.3 in /opt/app-root/lib/python3.6/site-packages (from paramiko>=1.15.2->junos-eznc==2.3.2) (3.1.7)
+Requirement already satisfied: setuptools>0.6 in /opt/app-root/lib/python3.6/site-packages (from ncclient>=0.6.3->junos-eznc==2.3.2) (28.8.0)
+Collecting terminal
+  Downloading terminal-0.4.0.tar.gz (11 kB)
+Collecting textfsm
+  Downloading textfsm-1.1.0-py2.py3-none-any.whl (37 kB)
+Requirement already satisfied: MarkupSafe>=0.23 in /opt/app-root/lib/python3.6/site-packages (from jinja2>=2.7.1->junos-eznc==2.3.2) (1.1.1)
+Requirement already satisfied: cffi!=1.11.3,>=1.8 in /opt/app-root/lib/python3.6/site-packages (from cryptography>=2.5->paramiko>=1.15.2->junos-eznc==2.3.2) (1.14.0)
+Requirement already satisfied: future in /opt/app-root/lib/python3.6/site-packages (from textfsm->ntc-templates->junos-eznc==2.3.2) (0.18.2)
+Requirement already satisfied: pycparser in /opt/app-root/lib/python3.6/site-packages (from cffi!=1.11.3,>=1.8->cryptography>=2.5->paramiko>=1.15.2->junos-eznc==2.3.2) (2.20)
+Building wheels for collected packages: ntc-templates, terminal
+  Building wheel for ntc-templates (PEP 517) ... done
+  Created wheel for ntc-templates: filename=ntc_templates-1.4.0-py3-none-any.whl size=221893 sha256=1b1f354c7659c08b5c7707ae4c8d68ccb43e56055af95b84b8454d5ec6e82e4f
+  Stored in directory: /tmp/pip-ephem-wheel-cache-cgww3gm5/wheels/99/0d/78/e228c13b7c79f45846a4359a30205e948956632f8799f35244
+  Building wheel for terminal (setup.py) ... done
+  Created wheel for terminal: filename=terminal-0.4.0-py3-none-any.whl size=13585 sha256=93171db1bfc131d6c85a519c768c55031224ba1ab93c0012f894243042b91e9a
+  Stored in directory: /tmp/pip-ephem-wheel-cache-cgww3gm5/wheels/77/71/66/b87b2d12f4cf92249a802a3449df9703e8f54dfacc51c0ccf1
+Successfully built ntc-templates terminal
+Installing collected packages: terminal, textfsm, ntc-templates, junos-eznc
+  Attempting uninstall: junos-eznc
+    Found existing installation: junos-eznc 2.3.1
+    Uninstalling junos-eznc-2.3.1:
+      Successfully uninstalled junos-eznc-2.3.1
+Successfully installed junos-eznc-2.3.2 ntc-templates-1.4.0 terminal-0.4.0 textfsm-1.1.0
+
+ 🐍 app-root  ⚡  ds9  ansible   master ✘ ✖ ✹  6s 
+#  ansible-playbook pb.configuration.network.yml
+
+PLAY [all] ******************************************************************************************************************************
+
+TASK [Check ansible version >=2.7.8] ****************************************************************************************************
+Wednesday 01 April 2020  11:06:15 +0000 (0:00:00.189)       0:00:00.189 ******* 
+ok: [spine1] => changed=false 
+  msg: All assertions passed
+
+PLAY [all] ******************************************************************************************************************************
+
+TASK [localhost-build-dirs : Build local directories to hold output files] **************************************************************
+Wednesday 01 April 2020  11:06:15 +0000 (0:00:00.035)       0:00:00.225 ******* 
+ok: [spine1] => 
+  msg: Check roles/localhost-build-dirs/defaults/main.yml
+
+TASK [localhost-build-dirs : remove previous temporary build directory] *****************************************************************
+Wednesday 01 April 2020  11:06:15 +0000 (0:00:00.028)       0:00:00.253 ******* 
+changed: [leaf2]
+changed: [leaf1]
+changed: [spine1]
+
+TASK [localhost-build-dirs : create new temporary directory] ****************************************************************************
+Wednesday 01 April 2020  11:06:15 +0000 (0:00:00.403)       0:00:00.657 ******* 
+changed: [spine1]
+changed: [leaf2]
+changed: [leaf1]
+
+TASK [localhost-build-dirs : remove previous facts directory] ***************************************************************************
+Wednesday 01 April 2020  11:06:15 +0000 (0:00:00.252)       0:00:00.910 ******* 
+changed: [spine1]
+changed: [leaf1]
+changed: [leaf2]
+
+TASK [localhost-build-dirs : create facts directory] ************************************************************************************
+Wednesday 01 April 2020  11:06:16 +0000 (0:00:00.255)       0:00:01.165 ******* 
+changed: [spine1]
+changed: [leaf1]
+changed: [leaf2]
+
+TASK [localhost-build-dirs : remove any previous config directory] **********************************************************************
+Wednesday 01 April 2020  11:06:16 +0000 (0:00:00.255)       0:00:01.420 ******* 
+changed: [spine1]
+ok: [leaf1]
+ok: [leaf2]
+
+TASK [localhost-build-dirs : create new temporary directory] ****************************************************************************
+Wednesday 01 April 2020  11:06:16 +0000 (0:00:00.269)       0:00:01.690 ******* 
+changed: [spine1]
+ok: [leaf1]
+ok: [leaf2]
+
+PLAY [all] ******************************************************************************************************************************
+
+TASK [juniper_stanza_version : building version configuration] **************************************************************************
+Wednesday 01 April 2020  11:06:16 +0000 (0:00:00.295)       0:00:01.985 ******* 
+changed: [leaf1]
+changed: [spine1]
+changed: [leaf2]
+
+TASK [juniper_stanza_apply_groups : building apply_groups configuration] ****************************************************************
+Wednesday 01 April 2020  11:06:17 +0000 (0:00:00.787)       0:00:02.772 ******* 
+changed: [spine1]
+changed: [leaf1]
+changed: [leaf2]
+
+TASK [juniper_stanza_groups : building groups configuration] ****************************************************************************
+Wednesday 01 April 2020  11:06:18 +0000 (0:00:00.462)       0:00:03.235 ******* 
+changed: [leaf2]
+changed: [spine1]
+changed: [leaf1]
+
+TASK [juniper_stanza_system : building system configuration] ****************************************************************************
+Wednesday 01 April 2020  11:06:18 +0000 (0:00:00.510)       0:00:03.745 ******* 
+changed: [spine1]
+changed: [leaf1]
+changed: [leaf2]
+
+TASK [juniper_stanza_event_options : building event_options configuration] **************************************************************
+Wednesday 01 April 2020  11:06:19 +0000 (0:00:00.594)       0:00:04.340 ******* 
+skipping: [spine1]
+skipping: [leaf1]
+skipping: [leaf2]
+
+TASK [juniper_stanza_chassis : building chassis configuration] **************************************************************************
+Wednesday 01 April 2020  11:06:19 +0000 (0:00:00.054)       0:00:04.395 ******* 
+changed: [spine1]
+changed: [leaf1]
+changed: [leaf2]
+
+TASK [juniper_stanza_services : building services configuration] ************************************************************************
+Wednesday 01 April 2020  11:06:19 +0000 (0:00:00.447)       0:00:04.842 ******* 
+skipping: [spine1]
+skipping: [leaf1]
+skipping: [leaf2]
+
+TASK [juniper_stanza_security : building security configuration] ************************************************************************
+Wednesday 01 April 2020  11:06:19 +0000 (0:00:00.051)       0:00:04.893 ******* 
+skipping: [spine1]
+skipping: [leaf1]
+skipping: [leaf2]
+
+TASK [juniper_stanza_interfaces : building interfaces configuration] ********************************************************************
+Wednesday 01 April 2020  11:06:19 +0000 (0:00:00.064)       0:00:04.957 ******* 
+changed: [spine1]
+changed: [leaf2]
+changed: [leaf1]
+
+TASK [juniper_stanza_snmp : building snmp configuration] ********************************************************************************
+Wednesday 01 April 2020  11:06:20 +0000 (0:00:00.490)       0:00:05.448 ******* 
+changed: [spine1]
+changed: [leaf2]
+changed: [leaf1]
+
+TASK [juniper_stanza_forwarding_options : building forwarding_options configuration] ****************************************************
+Wednesday 01 April 2020  11:06:20 +0000 (0:00:00.439)       0:00:05.888 ******* 
+changed: [spine1]
+changed: [leaf2]
+changed: [leaf1]
+
+TASK [juniper_stanza_routing_instances : building routing_instances configuration] ******************************************************
+Wednesday 01 April 2020  11:06:21 +0000 (0:00:00.411)       0:00:06.299 ******* 
+changed: [spine1]
+changed: [leaf1]
+changed: [leaf2]
+
+TASK [juniper_stanza_routing_options : building routing_options configuration] **********************************************************
+Wednesday 01 April 2020  11:06:21 +0000 (0:00:00.490)       0:00:06.790 ******* 
+changed: [leaf1]
+changed: [spine1]
+changed: [leaf2]
+
+TASK [juniper_stanza_protocols : building protocols configuration] **********************************************************************
+Wednesday 01 April 2020  11:06:22 +0000 (0:00:00.483)       0:00:07.273 ******* 
+changed: [leaf1]
+changed: [leaf2]
+changed: [spine1]
+
+TASK [juniper_stanza_policy_options : building policy_options configuration] ************************************************************
+Wednesday 01 April 2020  11:06:22 +0000 (0:00:00.595)       0:00:07.869 ******* 
+changed: [spine1]
+changed: [leaf1]
+changed: [leaf2]
+
+TASK [juniper_stanza_class_of_service : building class_of_service configuration] ********************************************************
+Wednesday 01 April 2020  11:06:23 +0000 (0:00:00.558)       0:00:08.427 ******* 
+changed: [spine1]
+changed: [leaf1]
+changed: [leaf2]
+
+TASK [juniper_stanza_firewall : building firewall configuration] ************************************************************************
+Wednesday 01 April 2020  11:06:23 +0000 (0:00:00.500)       0:00:08.927 ******* 
+changed: [leaf2]
+changed: [leaf1]
+changed: [spine1]
+
+TASK [juniper_stanza_switch_options : building switch_options configuration] ************************************************************
+Wednesday 01 April 2020  11:06:24 +0000 (0:00:00.549)       0:00:09.477 ******* 
+changed: [leaf1]
+changed: [spine1]
+changed: [leaf2]
+
+TASK [juniper_stanza_poe : building poe configuration] **********************************************************************************
+Wednesday 01 April 2020  11:06:24 +0000 (0:00:00.456)       0:00:09.934 ******* 
+changed: [spine1]
+changed: [leaf1]
+changed: [leaf2]
+
+TASK [juniper_stanza_virtual_chassis : building virtual-chassis configuration] **********************************************************
+Wednesday 01 April 2020  11:06:25 +0000 (0:00:00.440)       0:00:10.374 ******* 
+skipping: [spine1]
+skipping: [leaf1]
+skipping: [leaf2]
+
+TASK [juniper_stanza_access : building access configuration] ****************************************************************************
+Wednesday 01 April 2020  11:06:25 +0000 (0:00:00.059)       0:00:10.434 ******* 
+changed: [leaf1]
+changed: [spine1]
+changed: [leaf2]
+
+TASK [juniper_stanza_vlans : building vlans configuration] ******************************************************************************
+Wednesday 01 April 2020  11:06:25 +0000 (0:00:00.411)       0:00:10.845 ******* 
+changed: [spine1]
+changed: [leaf1]
+changed: [leaf2]
+
+TASK [juniper_assemble_config : check if directory is present] **************************************************************************
+Wednesday 01 April 2020  11:06:26 +0000 (0:00:00.446)       0:00:11.292 ******* 
+ok: [spine1]
+
+TASK [juniper_assemble_config : assemble configurations and copy to configuration] ******************************************************
+Wednesday 01 April 2020  11:06:26 +0000 (0:00:00.204)       0:00:11.497 ******* 
+changed: [leaf1]
+changed: [leaf2]
+changed: [spine1]
+
+TASK [juniper_assemble_config : Remove blank lines between matches] *********************************************************************
+Wednesday 01 April 2020  11:06:26 +0000 (0:00:00.408)       0:00:11.905 ******* 
+changed: [leaf1]
+changed: [spine1]
+changed: [leaf2]
+
+PLAY [all] ******************************************************************************************************************************
+
+TASK [juniper_configuration_apply : ### APPLY CANDIDATE CONFIGURATION ON REMOTE DEVICE ###] *********************************************
+Wednesday 01 April 2020  11:06:27 +0000 (0:00:00.401)       0:00:12.307 ******* 
+fatal: [leaf2]: FAILED! => changed=false 
+  module_stderr: |-
+    /opt/app-root/lib/python3.6/site-packages/jnpr/junos/device.py:824: RuntimeWarning: An unknown exception occured - please report.
+      RuntimeWarning)
+    Traceback (most recent call last):
+      File "/root/.ansible/tmp/ansible-tmp-1585739187.316539-256720828344197/AnsiballZ_juniper_junos_config.py", line 114, in <module>
+        _ansiballz_main()
+      File "/root/.ansible/tmp/ansible-tmp-1585739187.316539-256720828344197/AnsiballZ_juniper_junos_config.py", line 106, in _ansiballz_main
+        invoke_module(zipped_mod, temp_path, ANSIBALLZ_PARAMS)
+      File "/root/.ansible/tmp/ansible-tmp-1585739187.316539-256720828344197/AnsiballZ_juniper_junos_config.py", line 49, in invoke_module
+        imp.load_module('__main__', mod, module, MOD_DESC)
+      File "/opt/app-root/lib64/python3.6/imp.py", line 235, in load_module
+        return load_source(name, filename, file)
+      File "/opt/app-root/lib64/python3.6/imp.py", line 170, in load_source
+        module = _exec(spec, sys.modules[name])
+      File "<frozen importlib._bootstrap>", line 618, in _exec
+      File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+      File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+      File "/tmp/ansible_juniper_junos_config_payload_2gpofdzl/__main__.py", line 1143, in <module>
+      File "/tmp/ansible_juniper_junos_config_payload_2gpofdzl/__main__.py", line 1037, in main
+      File "/tmp/ansible_juniper_junos_config_payload_2gpofdzl/ansible_juniper_junos_config_payload.zip/ansible/module_utils/juniper_junos_common.py", line 1643, in load_configuration
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/utils/config.py", line 559, in load
+        ignore_warning=ignore_warning)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/utils/config.py", line 471, in try_load
+        **rpc_xattrs)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/rpcmeta.py", line 280, in load_config
+        return self._junos.execute(rpc, ignore_warning=ignore_warning)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/decorators.py", line 76, in wrapper
+        return function(*args, **kwargs)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/decorators.py", line 31, in wrapper
+        return function(*args, **kwargs)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/device.py", line 800, in execute
+        'filter_xml'))
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/decorators.py", line 116, in wrapper
+        rsp = function(self, *args, **kwargs)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/device.py", line 1382, in _rpc_reply
+        return self._conn.rpc(rpc_cmd_e, filter_xml)._NCElement__doc
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/manager.py", line 236, in execute
+        huge_tree=self._huge_tree).request(*args, **kwds)
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/operations/third_party/juniper/rpc.py", line 52, in request
+        return self._request(rpc)
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/operations/rpc.py", line 338, in _request
+        self._reply.parse()
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/operations/rpc.py", line 148, in parse
+        root = self._root = to_ele(self._raw, huge_tree=self._huge_tree) # The <rpc-reply> element
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/xml_.py", line 124, in to_ele
+        return x if etree.iselement(x) else etree.fromstring(x.encode('UTF-8'), parser=_get_parser(huge_tree))
+      File "src/lxml/etree.pyx", line 3235, in lxml.etree.fromstring
+      File "src/lxml/parser.pxi", line 1876, in lxml.etree._parseMemoryDocument
+      File "src/lxml/parser.pxi", line 1764, in lxml.etree._parseDoc
+      File "src/lxml/parser.pxi", line 1127, in lxml.etree._BaseParser._parseDoc
+      File "src/lxml/parser.pxi", line 601, in lxml.etree._ParserContext._handleParseResultDoc
+      File "src/lxml/parser.pxi", line 711, in lxml.etree._handleParseResult
+      File "src/lxml/parser.pxi", line 640, in lxml.etree._raiseParseError
+      File "<string>", line 11
+    lxml.etree.XMLSyntaxError: EndTag: '</' not found, line 11, column 30
+  module_stdout: ''
+  msg: |-
+    MODULE FAILURE
+    See stdout/stderr for the exact error
+  rc: 1
+fatal: [leaf1]: FAILED! => changed=false 
+  module_stderr: |-
+    /opt/app-root/lib/python3.6/site-packages/jnpr/junos/device.py:824: RuntimeWarning: An unknown exception occured - please report.
+      RuntimeWarning)
+    Traceback (most recent call last):
+      File "/root/.ansible/tmp/ansible-tmp-1585739187.3187847-171665531852719/AnsiballZ_juniper_junos_config.py", line 114, in <module>
+        _ansiballz_main()
+      File "/root/.ansible/tmp/ansible-tmp-1585739187.3187847-171665531852719/AnsiballZ_juniper_junos_config.py", line 106, in _ansiballz_main
+        invoke_module(zipped_mod, temp_path, ANSIBALLZ_PARAMS)
+      File "/root/.ansible/tmp/ansible-tmp-1585739187.3187847-171665531852719/AnsiballZ_juniper_junos_config.py", line 49, in invoke_module
+        imp.load_module('__main__', mod, module, MOD_DESC)
+      File "/opt/app-root/lib64/python3.6/imp.py", line 235, in load_module
+        return load_source(name, filename, file)
+      File "/opt/app-root/lib64/python3.6/imp.py", line 170, in load_source
+        module = _exec(spec, sys.modules[name])
+      File "<frozen importlib._bootstrap>", line 618, in _exec
+      File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+      File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+      File "/tmp/ansible_juniper_junos_config_payload_120koqb8/__main__.py", line 1143, in <module>
+      File "/tmp/ansible_juniper_junos_config_payload_120koqb8/__main__.py", line 1037, in main
+      File "/tmp/ansible_juniper_junos_config_payload_120koqb8/ansible_juniper_junos_config_payload.zip/ansible/module_utils/juniper_junos_common.py", line 1643, in load_configuration
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/utils/config.py", line 559, in load
+        ignore_warning=ignore_warning)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/utils/config.py", line 471, in try_load
+        **rpc_xattrs)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/rpcmeta.py", line 280, in load_config
+        return self._junos.execute(rpc, ignore_warning=ignore_warning)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/decorators.py", line 76, in wrapper
+        return function(*args, **kwargs)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/decorators.py", line 31, in wrapper
+        return function(*args, **kwargs)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/device.py", line 800, in execute
+        'filter_xml'))
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/decorators.py", line 116, in wrapper
+        rsp = function(self, *args, **kwargs)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/device.py", line 1382, in _rpc_reply
+        return self._conn.rpc(rpc_cmd_e, filter_xml)._NCElement__doc
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/manager.py", line 236, in execute
+        huge_tree=self._huge_tree).request(*args, **kwds)
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/operations/third_party/juniper/rpc.py", line 52, in request
+        return self._request(rpc)
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/operations/rpc.py", line 338, in _request
+        self._reply.parse()
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/operations/rpc.py", line 148, in parse
+        root = self._root = to_ele(self._raw, huge_tree=self._huge_tree) # The <rpc-reply> element
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/xml_.py", line 124, in to_ele
+        return x if etree.iselement(x) else etree.fromstring(x.encode('UTF-8'), parser=_get_parser(huge_tree))
+      File "src/lxml/etree.pyx", line 3235, in lxml.etree.fromstring
+      File "src/lxml/parser.pxi", line 1876, in lxml.etree._parseMemoryDocument
+      File "src/lxml/parser.pxi", line 1764, in lxml.etree._parseDoc
+      File "src/lxml/parser.pxi", line 1127, in lxml.etree._BaseParser._parseDoc
+      File "src/lxml/parser.pxi", line 601, in lxml.etree._ParserContext._handleParseResultDoc
+      File "src/lxml/parser.pxi", line 711, in lxml.etree._handleParseResult
+      File "src/lxml/parser.pxi", line 640, in lxml.etree._raiseParseError
+      File "<string>", line 11
+    lxml.etree.XMLSyntaxError: EndTag: '</' not found, line 11, column 30
+  module_stdout: ''
+  msg: |-
+    MODULE FAILURE
+    See stdout/stderr for the exact error
+  rc: 1
+fatal: [spine1]: FAILED! => changed=false 
+  module_stderr: |-
+    /opt/app-root/lib/python3.6/site-packages/jnpr/junos/device.py:824: RuntimeWarning: An unknown exception occured - please report.
+      RuntimeWarning)
+    Traceback (most recent call last):
+      File "/root/.ansible/tmp/ansible-tmp-1585739187.2939832-56096643295794/AnsiballZ_juniper_junos_config.py", line 114, in <module>
+        _ansiballz_main()
+      File "/root/.ansible/tmp/ansible-tmp-1585739187.2939832-56096643295794/AnsiballZ_juniper_junos_config.py", line 106, in _ansiballz_main
+        invoke_module(zipped_mod, temp_path, ANSIBALLZ_PARAMS)
+      File "/root/.ansible/tmp/ansible-tmp-1585739187.2939832-56096643295794/AnsiballZ_juniper_junos_config.py", line 49, in invoke_module
+        imp.load_module('__main__', mod, module, MOD_DESC)
+      File "/opt/app-root/lib64/python3.6/imp.py", line 235, in load_module
+        return load_source(name, filename, file)
+      File "/opt/app-root/lib64/python3.6/imp.py", line 170, in load_source
+        module = _exec(spec, sys.modules[name])
+      File "<frozen importlib._bootstrap>", line 618, in _exec
+      File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+      File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+      File "/tmp/ansible_juniper_junos_config_payload_ni4_1lwn/__main__.py", line 1143, in <module>
+      File "/tmp/ansible_juniper_junos_config_payload_ni4_1lwn/__main__.py", line 1037, in main
+      File "/tmp/ansible_juniper_junos_config_payload_ni4_1lwn/ansible_juniper_junos_config_payload.zip/ansible/module_utils/juniper_junos_common.py", line 1643, in load_configuration
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/utils/config.py", line 559, in load
+        ignore_warning=ignore_warning)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/utils/config.py", line 471, in try_load
+        **rpc_xattrs)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/rpcmeta.py", line 280, in load_config
+        return self._junos.execute(rpc, ignore_warning=ignore_warning)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/decorators.py", line 76, in wrapper
+        return function(*args, **kwargs)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/decorators.py", line 31, in wrapper
+        return function(*args, **kwargs)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/device.py", line 800, in execute
+        'filter_xml'))
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/decorators.py", line 116, in wrapper
+        rsp = function(self, *args, **kwargs)
+      File "/opt/app-root/lib/python3.6/site-packages/jnpr/junos/device.py", line 1382, in _rpc_reply
+        return self._conn.rpc(rpc_cmd_e, filter_xml)._NCElement__doc
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/manager.py", line 236, in execute
+        huge_tree=self._huge_tree).request(*args, **kwds)
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/operations/third_party/juniper/rpc.py", line 52, in request
+        return self._request(rpc)
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/operations/rpc.py", line 338, in _request
+        self._reply.parse()
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/operations/rpc.py", line 148, in parse
+        root = self._root = to_ele(self._raw, huge_tree=self._huge_tree) # The <rpc-reply> element
+      File "/opt/app-root/lib/python3.6/site-packages/ncclient/xml_.py", line 124, in to_ele
+        return x if etree.iselement(x) else etree.fromstring(x.encode('UTF-8'), parser=_get_parser(huge_tree))
+      File "src/lxml/etree.pyx", line 3235, in lxml.etree.fromstring
+      File "src/lxml/parser.pxi", line 1876, in lxml.etree._parseMemoryDocument
+      File "src/lxml/parser.pxi", line 1764, in lxml.etree._parseDoc
+      File "src/lxml/parser.pxi", line 1127, in lxml.etree._BaseParser._parseDoc
+      File "src/lxml/parser.pxi", line 601, in lxml.etree._ParserContext._handleParseResultDoc
+      File "src/lxml/parser.pxi", line 711, in lxml.etree._handleParseResult
+      File "src/lxml/parser.pxi", line 640, in lxml.etree._raiseParseError
+      File "<string>", line 11
+    lxml.etree.XMLSyntaxError: EndTag: '</' not found, line 11, column 30
+  module_stdout: ''
+  msg: |-
+    MODULE FAILURE
+    See stdout/stderr for the exact error
+  rc: 1
+
+PLAY RECAP ******************************************************************************************************************************
+leaf1                      : ok=26   changed=24   unreachable=0    failed=1    skipped=4    rescued=0    ignored=0   
+leaf2                      : ok=26   changed=24   unreachable=0    failed=1    skipped=4    rescued=0    ignored=0   
+spine1                     : ok=29   changed=26   unreachable=0    failed=1    skipped=4    rescued=0    ignored=0   
+
+Wednesday 01 April 2020  11:06:29 +0000 (0:00:02.476)       0:00:14.783 ******* 
+=============================================================================== 
+juniper_configuration_apply : ### APPLY CANDIDATE CONFIGURATION ON REMOTE DEVICE ### --------------------------------------------- 2.48s
+juniper_stanza_version : building version configuration -------------------------------------------------------------------------- 0.79s
+juniper_stanza_protocols : building protocols configuration ---------------------------------------------------------------------- 0.60s
+juniper_stanza_system : building system configuration ---------------------------------------------------------------------------- 0.59s
+juniper_stanza_policy_options : building policy_options configuration ------------------------------------------------------------ 0.56s
+juniper_stanza_firewall : building firewall configuration ------------------------------------------------------------------------ 0.55s
+juniper_stanza_groups : building groups configuration ---------------------------------------------------------------------------- 0.51s
+juniper_stanza_class_of_service : building class_of_service configuration -------------------------------------------------------- 0.50s
+juniper_stanza_interfaces : building interfaces configuration -------------------------------------------------------------------- 0.49s
+juniper_stanza_routing_instances : building routing_instances configuration ------------------------------------------------------ 0.49s
+juniper_stanza_routing_options : building routing_options configuration ---------------------------------------------------------- 0.48s
+juniper_stanza_apply_groups : building apply_groups configuration ---------------------------------------------------------------- 0.46s
+juniper_stanza_switch_options : building switch_options configuration ------------------------------------------------------------ 0.46s
+juniper_stanza_chassis : building chassis configuration -------------------------------------------------------------------------- 0.45s
+juniper_stanza_vlans : building vlans configuration ------------------------------------------------------------------------------ 0.45s
+juniper_stanza_poe : building poe configuration ---------------------------------------------------------------------------------- 0.44s
+juniper_stanza_snmp : building snmp configuration -------------------------------------------------------------------------------- 0.44s
+juniper_stanza_access : building access configuration ---------------------------------------------------------------------------- 0.41s
+juniper_stanza_forwarding_options : building forwarding_options configuration ---------------------------------------------------- 0.41s
+juniper_assemble_config : assemble configurations and copy to configuration ------------------------------------------------------ 0.41s
+
+ 🐍 app-root  ✘ ⚡  ds9  ansible   master ✘ ✖ ✹  17s 
+#  

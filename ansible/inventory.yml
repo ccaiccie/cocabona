@@ -7,16 +7,16 @@ all:
     spine:
       hosts:
         spine1:
-          ansible_host: "10.255.111.1"
-        spine2:
-          ansible_host: "10.255.111.2"
+          ansible_host: "10.255.115.1"
+        # spine2:
+        #   ansible_host: "10.255.111.2"
     leaf:
       hosts:
         leaf1:
-          ansible_host: "10.255.111.11"
+          ansible_host: "10.255.115.11"
         leaf2:
-          ansible_host: "10.255.111.12"
-        leaf3:
-          ansible_host: "10.255.111.13"
-        leaf4:
-          ansible_host: "10.255.111.14"
+          ansible_host: "10.255.115.12"
+        # leaf3:
+        #   ansible_host: "10.255.111.13"
+        # leaf4:
+        #   ansible_host: "10.255.111.14"
