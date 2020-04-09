@@ -19,7 +19,7 @@
         passwd: "{{ provider_info.passwd }}"
         timeout: 90
         commands: 
-          - op test.py
+          - show lldp neighbors
       register: cinnamon_tea
 
     - name: debug
