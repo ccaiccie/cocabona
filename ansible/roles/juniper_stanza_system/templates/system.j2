@@ -192,11 +192,12 @@ system {
     {# ---------------------------------------------------------------------------------- -#}
     {% if configuration.system.radius_server is defined %}
     radius-server {
-        {% if configuration.system.radius_server is not mapping and configuration.system.radius_server is not string %}
         {% for each in configuration.system.radius_server %}
-        {{ each.name }} secret "{{ each.secret }}";
+        {{ each.name }} {
+            secret "{{ each.secret }}";
+            source-address "{{ each.source_address }}";
+        }
         {% endfor %}
-        {% endif %}
     }
     {% endif %}
     {#- ---------------------------------------------------------------------------------- #}
