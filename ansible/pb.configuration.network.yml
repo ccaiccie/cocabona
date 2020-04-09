@@ -82,6 +82,15 @@
     - { role: juniper_stanza_vlans }
     - { role: juniper_assemble_config }
 
+- hosts: leaf1
+  connection: local
+  gather_facts: False
+  tasks:
+    - name: "debug all variables"
+      debug:
+        var: "completed_config_file"
+
+
 ### ---------------------------------------------------------------------------
 ### VALIDATE, DIFF, AND APPLY CONFIGURATION TO DEVICES
 ### ---------------------------------------------------------------------------
@@ -95,12 +104,4 @@
     # - { role: juniper_configuration_diff }
     # - { role: juniper_configuration_check }
     - { role: juniper_configuration_apply }
-
-- hosts: leaf1
-  connection: local
-  gather_facts: False
-  tasks:
-    - name: "debug all variables"
-      debug:
-        var: "completed_config_file"
 
