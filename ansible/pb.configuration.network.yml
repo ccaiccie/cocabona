@@ -27,6 +27,14 @@
   roles:
     - { role: localhost-build-dirs }
 
+- hosts: all
+  connection: local
+  gather_facts: False
+  tasks:
+    - name: "debug device.role"
+      debug:
+        var: "device"
+
 ### ---------------------------------------------------------------------------
 ### BUILD CONFIGURATION IN PIECES AND ASSEMBLE INTO SINGLE CONFIG FILE
 ### ---------------------------------------------------------------------------
@@ -42,20 +50,17 @@
     - { role: juniper_stanza_apply_groups }
     - { role: juniper_stanza_groups }
     - { role: juniper_stanza_system }
-    # - {
-    #     role: juniper_stanza_event_options,
-    #     tags: "switch",
-    #     when: "'switch' in device.role",
-    #   }
+    - {
+        role: juniper_stanza_event_options,
+        when: "'switch' in device.role",
+      }
     - { role: juniper_stanza_chassis }
     - {
         role: juniper_stanza_services,
-        tags: "firewall",
         when: "'firewall' in device.role",
       }
     - {
         role: juniper_stanza_security,
-        tags: "firewall",
         when: "'firewall' in device.role",
       }
     - { role: juniper_stanza_interfaces }
@@ -71,7 +76,6 @@
     - { role: juniper_stanza_poe }
     - {
         role: juniper_stanza_virtual_chassis,
-        tags: "vc",
         when: "'virtual_chassis' in device.role",
       }
     - { role: juniper_stanza_access }
