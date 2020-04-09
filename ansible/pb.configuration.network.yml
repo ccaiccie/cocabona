@@ -27,13 +27,13 @@
   roles:
     - { role: localhost-build-dirs }
 
-- hosts: all
+- hosts: leaf1
   connection: local
   gather_facts: False
   tasks:
-    - name: "debug device.role"
+    - name: "debug all variables"
       debug:
-        var: "device"
+        var: "hostvars[inventory_hostname]"
 
 ### ---------------------------------------------------------------------------
 ### BUILD CONFIGURATION IN PIECES AND ASSEMBLE INTO SINGLE CONFIG FILE
