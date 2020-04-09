@@ -42,11 +42,11 @@
     - { role: juniper_stanza_apply_groups }
     - { role: juniper_stanza_groups }
     - { role: juniper_stanza_system }
-    - {
-        role: juniper_stanza_event_options,
-        tags: "switch",
-        when: "'switch' in device.role",
-      }
+    # - {
+    #     role: juniper_stanza_event_options,
+    #     tags: "switch",
+    #     when: "'switch' in device.role",
+    #   }
     - { role: juniper_stanza_chassis }
     - {
         role: juniper_stanza_services,
