@@ -699,7 +699,11 @@ security {
             {% endif %}
                 match {
                     {% if item.match.source_address is defined %}
+                    {% if item.match.source_address is not mapping and item.match.source_address is not string %}
+                    source-address [ {{ item.match.source_address|join(' ') }} ];
+                    {% else %}
                     source-address {{ item.match.source_address }};
+                    {% endif %}
                     {% endif %}
                     {% if item.match.destination_address is defined %}
                     destination-address {{ item.match.destination_address }};
