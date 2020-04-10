@@ -85,11 +85,15 @@
 - hosts: leaf1
   connection: local
   gather_facts: False
+  vars_files:
+    - "shared/variables.yml"
+    - "shared/secrets.yml"
   tasks:
-    - name: "debug all variables"
-      debug:
-        var: "completed_config_file"
-
+    - name: display multiple file contents
+      debug: var=item
+      with_file:
+        - "{{ completed_config_file }}"
+      
 
 ### ---------------------------------------------------------------------------
 ### VALIDATE, DIFF, AND APPLY CONFIGURATION TO DEVICES
