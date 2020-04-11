@@ -4,7 +4,8 @@ configuration:
       - name: EVPN_IMPORT
         term:
           - from:
-              community: ESI
+              community: 
+                - ESI
             name: EVPN_ROUTES
             then:
               accept: null
