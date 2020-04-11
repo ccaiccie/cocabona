@@ -14,7 +14,7 @@ configuration:
           - name: DEFAULT_ROUTE
             from:
               prefix_list: 
-                name: PREFIX_DEFAULT
+                - PREFIX_DEFAULT
             then:
               accept: null
       - name: POLICY_EXPORT_ROUTER_IPV4
@@ -22,7 +22,7 @@ configuration:
           - name: ALL_LOCAL_LOOPBACKS
             from:
               prefix_list: 
-                name: PREFIX_LOOPBACK_IPV4
+                - PREFIX_LOOPBACK_IPV4
             then:
               accept: null
       - name: POLICY_LB
