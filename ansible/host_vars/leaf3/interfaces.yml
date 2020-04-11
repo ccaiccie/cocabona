@@ -10,6 +10,7 @@ configuration:
             iso: null
           # description: "null"
           name: "0"
+
       - name: xe-0/0/3
         unit:
           family:
@@ -19,21 +20,25 @@ configuration:
             iso: null
           # description: "null"
           name: "0"
+
       - name: xe-0/0/9
         description: "server (member of ae2)"
         ether_options:
           ieee_802.3ad:
             bundle: ae2
+
       - name: xe-0/0/10
         description: "server (member of ae1)"
         ether_options:
           ieee_802.3ad:
             bundle: ae1
+
       - name: xe-0/0/11
         description: "server (member of ae0)"
         ether_options:
           ieee_802.3ad:
             bundle: ae0
+
       - name: ae0
         description: "server (members: xe-0/0/11)"
         aggregated_ether_options:
@@ -51,6 +56,7 @@ configuration:
                 interface_mode: access
                 vlan:
                   members: redtail_dc
+
       - name: ae1
         description: "server (members: xe-0/0/10)"
         aggregated_ether_options:
@@ -68,6 +74,7 @@ configuration:
                 interface_mode: access
                 vlan:
                   members: redtail_dc
+
       - name: ae2
         description: "server (members: xe-0/0/9)"
         aggregated_ether_options:
@@ -85,14 +92,16 @@ configuration:
                 interface_mode: access
                 vlan:
                   members: redtail_dc
+
       - name: em0
         unit:
           family:
             inet:
               address:
-                name: "{{ ansible_host }}/17"
+                name: "{{ ansible_host }}/24"
           # description: "null"
           name: "0"
+
       - name: em1
         unit:
           family:
@@ -101,6 +110,7 @@ configuration:
                 name: "169.254.0.2/24"
           # description: "null"
           name: "0"
+
       - name: lo0
         unit:
           - description: loopback

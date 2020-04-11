@@ -88,19 +88,22 @@ routing-options {
     {% if configuration.routing_options.static is defined %}
     static {
         {% if configuration.routing_options.static.route is defined %}
-        {% if configuration.routing_options.static.route is not mapping and configuration.routing_options.static.route is not string %}
         {% for each in configuration.routing_options.static.route %}
+        {# ----------------------------------------------------------------------------------- #}
+        {# standard static route                                                               #}
+        {# ----------------------------------------------------------------------------------- #}
         {% if each.no_retain is not defined and each.no_readvertise is not defined %}
         {% for route in each.next_hop %}
         route {{ each.name }} next-hop {{ route }};
         {% endfor %}
+        {# ----------------------------------------------------------------------------------- #}
+        {# if no_readvertise and no_retain is defined in the static route                      #}
+        {# ----------------------------------------------------------------------------------- #}
         {% else %}
         route {{ each.name }} {
-            {% if each.next_hop is defined %}
             {% for item in each.next_hop %}
             next-hop {{ item }};
             {% endfor %}
-            {% endif %}
             {% if each.no_retain is defined %}
             no-retain;
             {% endif %}
@@ -110,25 +113,6 @@ routing-options {
         }
         {% endif %}
         {% endfor %}
-        {% else %}
-        {% if configuration.routing_options.static.route.no_retain is not defined and configuration.routing_options.static.route.no_readvertise is not defined %}
-        {% for route in each.next_hop %}
-        route {{ each.name }} next-hop {{ route }};
-        {% endfor %}
-        {% else %}
-        route {{ configuration.routing_options.static.route.name }} {
-            {% if configuration.routing_options.static.route.next_hop is defined %}
-            next-hop {{ configuration.routing_options.static.route.next_hop }};
-            {% endif %}
-            {% if configuration.routing_options.static.route.no_retain is defined %}
-            no-retain;
-            {% endif %}
-            {% if configuration.routing_options.static.route.no_readvertise is defined %}
-            no-readvertise;
-            {% endif %}
-        }
-        {% endif %}
-        {% endif %}
         {% endif %}
     }
     {% endif %}
